@@ -1,104 +1,121 @@
-body{
-	background-color: #ffffff;
+/* HEADER */
 
-}
-#contendor{
-
-
-}
-#carrito{
-	padding: 16px;
-  text-align: center;
-	background-color: #ffffff;
-  margin-top: 25px;
-	border: black 1px solid;
-
-
-}
-#tuPedido{
-  position: relative;
-	left: 170px;
-
-	bottom: 30px;
-	font-size: "7";
-}
-#tabla{
+header{
 	position: relative;
-	left: 170px;
+	z-index: 10;
+	width: 100%;
 }
-#comprar{
-	position: relative;
-	left: 170px;
+
+/* NavBar */
+
+.navbar{
+	padding: 10px 0;
 }
-#cancelar{
-	position: relative;
-	left: 170px;
+
+
+#logo{
+	height: 100%;
+	margin-top: -3px;
+	margin-right: 5px;
+	height: 130px;
 }
-#total{
-	position: relative;
-	left: 170px;
+
+.navbar-brand{
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 2em;
+	color: dodgerblue;
 }
-#pedido{
-	padding: 60px;
+
+.nav-item{
+	font-weight: 800;
+	text-transform: uppercase;
 }
-#carrito h2{
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+	background: #5dc1b9;
+	color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+	color: dodgerblue;
+	padding: 5px 15px;
+}
+
+.navbar-light .navbar-toggler{
+	border: none;
+	color: #fff;
+	border: 2px solid dodgerblue;
+	border-radius: 0;
+	outline: none;
+}
+
+.navbar-collapse{
+	background: #fff;
+}
+
+/* SubMenu */
+
+.menu-bar{
+	background-color: grey;
+	margin-top: 10px;
+}
+
+.menu-bar a{
+	color: darkgray;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.menu-bar a:hover{
+	text-decoration: none;
 	color: #000000;
 }
-#carrito p{
-	color: #000000;
-}
-#items{
-	background-color: #ffffff;
-	border: #8ed3cc 2px solid;
-	padding: 16px;
-	left: 170px;
 
-
+.menu-list{
+	padding: 12px 0;
+	margin-bottom: 0;
 }
 
-.img-fluid{
-
-   border: #8ed3cc 1px solid;
-}
-
-#precioCompra{
-	bottom: -60px;
-	position: relative;
-	font-size: "7";
-  
-}
-.card-body{
-	padding: 16px;
-  text-align: center;
-	background-color: #ffffff;
-  margin-top: 25px;
-	border: #8ed3cc 5px solid;
-	border-radius: 15px;
-
-}
-.card col-sm-4{
-	padding: 16px;
-  text-align: center;
-	border-radius: 15px;
+.menu-list > li:not(:last-child){
+	margin-right: 40px;
 }
 
 
-.navegacion{
-     background-color: #8ed3cc;
+/* Carousel */
+.carousel, .carousel-inner > .carousel-item > img {
+	width: 1110px;
+	height: 360px;
+	max-height: 460px;
 }
 
-.nav-link:hover{
-	background-color: #49A1D5;
-	color:#000000;
-	border-radius: 15px;
-
+.slider-home{
+	margin-bottom: 50px;
 }
 
-
-
-.btn-primary:hover{
-    background-color: #39a69b;
-
+.carousel-caption{
+	background-color: rgba(41, 23, 1, 0.75);
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 30px 45px;
+	text-align: left;
+	width: 340px;
 }
 
-/*footer*/
+.carousel-caption p{
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.carousel-caption h1{
+	font-size: 36px;
+	line-height: 40px;
+}
+
+.carousel-caption h4{
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+
