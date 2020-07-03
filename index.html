@@ -9,40 +9,46 @@
     <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
     <title>Website Registro Civil</title>
   </head>
   <body>
     <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="index.html">
-            <img id="logo" src="img/logo.jpg" alt="buenos aires provincia">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img id="logo" src="img/logo.png" alt="buenos aires provincia">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto menu-list list-inline">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guia Tramites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Solicitudes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Municipios</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- <div class="container">
         
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-lg-auto menu-list list-inline">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Guia Tramites</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Solicitudes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Servicios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Municipios</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      </div> -->
 
       <div class="menu-bar text-xs-reght">
         <nav class="container" role="menu">
@@ -56,7 +62,7 @@
     </header>
 
     <div id="main">
-      <div class="container">
+      <div class="container-fluid" align="center">
         <div id="slider-home" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#slider-home" data-slide-to="0" class="active"></li>
@@ -96,11 +102,43 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+
+        <!-- <div class="container">
+          <section class="col-md-8">
+            <div id="main" class="clearfix">
+              <div id="promoted" class="clearfix"></div>
+            </div>
+          </section>
+        </div> -->
+
+        <div class="container">
+          <div class="row main-body">
+            <div class="col-md-6">
+              <h3>
+                Misión y Visión
+              </h3>
+              <hr class="rounded">
+              <br>
+              <p>
+                El Registro Provincial de las Personas tiene como responsabilidad primaria el registro de los hechos y actos que constituyan, alteren o modifiquen el estado civil y la capacidad de las personas, como así también, los trámites inherentes al Documento Nacional de Identidad (DNI), pasaporte y pasaporte Express, recientemente.
+                Está conformado por 481 delegaciones divididas en 21 Subdirecciones Zonales, dada la vasta extensión de la provincia de Buenos Aires. Dentro de las 481 delegaciones, existen 10 Centros de Documentación Rápida (CDR) y 3 Centros integrales de Documentación (CID) que dan a los vecinos de la provincia la posibilidad de realizar trámites de manera sencilla, rápida y ágil. En nuestras oficinas se realizan 6.000.000 de trámites anuales, aproximadamente.
+                A su vez, la Casa Central del Registro Provincial de las Personas se encuentra en Calle 1 N° 1342 esq. 60, La Plata, Provincia de Buenos Aires.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h3>
+                Conoce alguna de Nuestras Historias
+              </h3>
+              <hr class="rounded">
+              <br>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/CWPcfl02U_I" frameborder="0" allow="accelerometer; 
+              autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>

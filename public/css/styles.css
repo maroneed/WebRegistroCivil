@@ -9,7 +9,9 @@ header{
 /* NavBar */
 
 .navbar{
-	padding: 10px 0;
+	/* padding: 5px 0; */
+	margin-left: 5em;
+	margin-right: 5em;
 }
 
 
@@ -17,7 +19,7 @@ header{
 	height: 100%;
 	margin-top: -3px;
 	margin-right: 5px;
-	height: 130px;
+	height: 100px;
 }
 
 .navbar-brand{
@@ -82,10 +84,9 @@ header{
 	margin-right: 40px;
 }
 
-
 /* Carousel */
 .carousel, .carousel-inner > .carousel-item > img {
-	width: 1110px;
+	width: 1130px;
 	height: 360px;
 	max-height: 460px;
 }
@@ -119,3 +120,15 @@ header{
 	margin-top: 10px;
 }
 
+/* Body */
+
+.row, .main-body{
+	padding-top: 50px;
+	text-align: justify;
+}
+
+/* Rounded border */
+hr.rounded {
+	border-top: 8px solid #bbb;
+	border-radius: 5px;
+  }
