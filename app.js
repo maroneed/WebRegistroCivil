@@ -14,6 +14,10 @@ router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+router.get('/index.html',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+});
+
 //add the router
 app.use('/', router);
 // static files
