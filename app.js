@@ -18,6 +18,10 @@ router.get('/index.html',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+router.get('/pages/tramites/tramites.html', function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/tramites/tramites.html'));
+});
+
 //add the router
 app.use('/', router);
 // static files

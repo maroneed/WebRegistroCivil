@@ -1,11 +1,8 @@
 body{
 	font-family: 'Roboto', sans-serif;
+	line-height: 40px;
 }
 
-/* a{
-	color: #291701;
-	font-weight: bold;
-} */
 
 /* HEADER */
 
@@ -18,11 +15,9 @@ header{
 /* NavBar */
 
 .navbar{
-	/* padding: 5px 0; */
 	margin-left: 5em;
 	margin-right: 5em;
 }
-
 
 #logo{
 	height: 100%;
@@ -73,15 +68,16 @@ header{
 	margin-top: 10px;
 }
 
-/* .menu-bar a{
-	color: darkgray;
-	font-size: 16px;
-	font-weight: 500;
-} */
+.menu-bar a{
+	display: block;
+	padding: 0 10px;
+	color: #332f2c;
+	font-size: 18px;
+}
 
 .menu-bar a:hover{
 	text-decoration: none;
-	color: #000000;
+	color: #fff;
 }
 
 .menu-list{
@@ -101,7 +97,7 @@ header{
 
 /* Carousel */
 .carousel, .carousel-inner > .carousel-item > img {
-	width: 1130px;
+	width: 1120px;
 	height: 360px;
 	max-height: 460px;
 }
@@ -123,12 +119,15 @@ header{
 
 .carousel-caption p{
 	font-size: 20px;
-	line-height: 25px;
+	line-height: 35px;
 }
 
 .carousel-caption h1{
 	font-size: 36px;
 	line-height: 40px;
+	margin: 16px 0;
+	padding: 0 0 10px;
+	
 }
 
 .carousel-caption h4{
@@ -147,7 +146,21 @@ header{
 	font-size: 30px;
 	border-bottom: 3px solid #5dc1b9;
 	padding-bottom: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 15px; 
+	margin: 16px 0;
+}
+
+.main-body h5{
+	margin: 16px 0px;
+	padding: 0px 16px;
+	text-align: center;
+}
+
+.main-body h1{
+	font-size: 36px;
+	line-height: 40px;
+	margin: 16px 0;
+	padding: 0 16px;
 }
 
 h3 i{
@@ -156,30 +169,106 @@ h3 i{
 
 .row, .main-body p{
 	font-size: 20px;
+	margin: auto;
+}
+
+
+.delegaciones-container ul{
+	padding: 12px 0;
+	position: relative;
+}
+
+.delegaciones-container ul li{
+	display: inline;
+	margin: 0 auto;
+}
+
+.delegaciones-container ul li a{
+	text-align: left;
+	display: block;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #332f2c;
+	font-size: 18px;
+}
+
+.delegaciones-container a:hover{
+	text-decoration: none;
+	color: #332f2c;
+}
+
+.guiaTramites-container ul{
+	padding: 12px 0;
+	position: relative;
+}
+
+.guiaTramites-container ul li{
+	display: inline;
+	margin: 0 auto;
+}
+
+.guiaTramites-container ul li a{
+	text-align: left;
+	display: block;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #332f2c;
+	font-size: 18px;
+}
+
+.guiaTramites-container a:hover{
+	text-decoration: none;
+	color: #332f2c;
+}
+
+.noticiasRelacionadas-container ul{
+	padding: 12px 0;
+	position: relative;
+}
+
+.noticiasRelacionadas-container ul li{
+	display: inline;
+	margin: 0 auto;
+}
+
+.noticiasRelacionadas-container ul li a{
+	text-align: left;
+	display: block;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #332f2c;
+	font-size: 18px;
+}
+
+.noticiasRelacionadas-container a:hover{
+	text-decoration: none;
+	color: #332f2c;
 }
 
 
 /* Footer */
 /* Footer sidebars */
 
+
 .sidebars-zone{
 	background-color: rgb(189, 184, 184);
 	padding-top: 20px;
-	/* margin-left: 5em;
-	margin-right: 5em; */
 }
 
-/* .sidebars-zone h5{
-	font-size: 20px;
-	border-bottom: 3px, solid #5dc1b9 !important; 
-	padding-bottom: 10px;
-	margin-bottom: 15px; 
-} */
+.sidebars-zone h5{
+	margin: 16px 0px;
+	padding: 0px 16px;
+}
 
-.sidebars-zone a{
+/* .sidebars-zone a{
 	margin-bottom: 18px;
+	text-align: left;
 	display: block;
-}
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #332f2c;
+	font-size: 18px;
+} */
 
 .sidebars-zone a:hover{
 	color: #000;
@@ -194,9 +283,9 @@ h3 i{
 }
 
 .redes-container ul{
- 	padding: 12px 0;
+	padding: 20px 0;
+	margin: 0 20px; 
 	position: relative;
-	margin-bottom: 0;
 } 
 
 .redes-container ul li{
@@ -245,9 +334,9 @@ h3 i{
 }
 
 .telefonos-container ul{
-	padding: 12px 0;
+	padding: 20px 0;
+	margin: 0 12px;
 	position: relative;
-	margin-bottom: 0;
 }
 
 .telefonos-container ul li{
@@ -262,7 +351,34 @@ h3 i{
 	font-size: 18px;
 }
 
+.info-container ul{
+	padding: 12px 0;
+	position: relative;
+}
+
+.info-container ul li{
+	display: inline;
+	margin: 0 auto;
+}
+
+.info-container ul li a{
+	margin-bottom: 18px;
+	text-align: left;
+	display: block;
+	/* padding: 0 10px; */
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #332f2c;
+	font-size: 18px;
+}
+
+.info-container a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
 /* Helpers */
 .mar-top-80{
-	margin-top: 80px;
+	margin-top: 50px;
 }
