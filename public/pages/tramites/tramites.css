@@ -1,0 +1,169 @@
+.turnos-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.turnos-container button{
+    width: 200px;
+    height: 200px;
+    background: #9d6db6;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.turnos-container button:hover{
+    background: #ebfffb;
+    color: #9d6db6;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
+
+.nacimientos-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nacimientos-container button{
+    width: 200px;
+    height: 200px;
+    background: #18b596;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.nacimientos-container button:hover{
+    background: #ebfffb;
+    color: #18b596;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
+
+/* col-sm-6 col-xs-12 */
+
+.matrimonios-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.matrimonios-container button{
+    width: 200px;
+    height: 200px;
+    background: #ff9624;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.matrimonios-container button:hover{
+    background: #ebfffb;
+    color: #ff9624;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
+
+.dni-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dni-container button{
+    width: 200px;
+    height: 200px;
+    background: #037dbf;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.dni-container button:hover{
+    background: #ebfffb;
+    color: #037dbf;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
+
+.divorsios-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divorsios-container button{
+    width: 200px;
+    height: 200px;
+    background: #3a3a3a;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.divorsios-container button:hover{
+    background: #ebfffb;
+    color: #3a3a3a;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
+
+.defunciones-container{
+    max-width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.defunciones-container button{
+    width: 200px;
+    height: 200px;
+    background: #f72525;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    color: #ebfffb;
+    font-size: 100px;
+    transition: .3s ease all;
+}
+
+.defunciones-container button:hover{
+    background: #ebfffb;
+    color: #f72525;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
+}
