@@ -22,6 +22,10 @@ router.get('/pages/tramites/tramites.html', function(req,res){
   res.sendFile(path.join(__dirname+'/pages/tramites/tramites.html'));
 });
 
+router.get('/pages/turnos/dni/dni.html', function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/turnos/dni/dni.html'));
+});
+
 //add the router
 app.use('/', router);
 // static files

@@ -18,6 +18,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .turnos-container button:hover{
@@ -46,6 +49,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .nacimientos-container button:hover{
@@ -76,6 +82,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .matrimonios-container button:hover{
@@ -104,6 +113,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .dni-container button:hover{
@@ -132,6 +144,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .divorsios-container button:hover{
@@ -160,6 +175,9 @@
     color: #ebfffb;
     font-size: 100px;
     transition: .3s ease all;
+
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 .defunciones-container button:hover{
