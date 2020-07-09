@@ -1,4 +1,4 @@
-.turnos-container{
+/* .turnos-container{
     max-width: auto;
     height: auto;
     margin: auto;
@@ -27,15 +27,17 @@
     background: #ebfffb;
     color: #9d6db6;
     box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
-}
+} */
 
 .nacimientos-container{
     max-width: auto;
     height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .nacimientos-container button{
@@ -67,8 +69,10 @@
     height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .matrimonios-container button{
@@ -98,8 +102,10 @@
     height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .dni-container button{
@@ -124,16 +130,18 @@
     box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
 }
 
-.divorsios-container{
+.divorcios-container{
     max-width: auto;
     height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
-.divorsios-container button{
+.divorcios-container button{
     width: 200px;
     height: 200px;
     background: #3a3a3a;
@@ -149,7 +157,7 @@
     border-radius: 15px;
 }
 
-.divorsios-container button:hover{
+.divorcios-container button:hover{
     background: #ebfffb;
     color: #3a3a3a;
     box-shadow: 3px 3px 50px rgba(0, 0, 0, .7);
@@ -160,8 +168,10 @@
     height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .defunciones-container button{

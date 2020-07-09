@@ -47,24 +47,20 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </nav>   
+    </header>
 
-      <!-- <div class="container">
-        
-      </div> -->
-
+    <div id="main">
       <div class="menu-bar text-xs-reght">
         <nav class="container" role="menu">
           <ul class="menu-list list-inline">
             <li class="list-inline-item">
-              <a href="#">Inicio</a>
+              <a href="#">Inicio / Tramite</a>
             </li>
           </ul>
         </nav>
       </div>
-    </header>
 
-    <div id="main">
       <div class="container-fluid" align="center">
         <div id="slider-home" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -114,47 +110,47 @@
                 El Registro del Estado Civil y Capacidad de las Personas es responsable de la inscripción de todos los hechos 
                 y actos jurídicos que den origen, alteren o modifiquen dicho estado y/o capacidad.
               </p>
+              <h1><strong>¿Qué tramite queres realizar?</strong></h1>
               <p>
-                <h1><strong>¿Qué tramite queres realizar?</strong></h1>
                 Damos seguimiento a tus solicitudes. Sacá tu turno.
               </p>
             </div>
           <div class="row main-body mar-top-80">
-            <div class="col-md-2 center-block">
+            <!-- <div class="col-md-2 center-block">
               <div class="turnos-container">
                 <button><i class="far fa-calendar-alt"></i></button>
               </div>
               <h5><strong>Solicitud de Turnos</strong></h5>
-            </div>
-            <div class="col-md-2 center-block">
+            </div> -->
+            <div class="col-md-4 center-block">
               <div class="nacimientos-container">
-                <button><i class="fas fa-pen-nib"></i></button>
+                <a href="/pages/turnos/nacimiento/nacimiento.html"><button><i class="fas fa-pen-nib"></i></button></a>
+                <h5><strong>Inscripción de Nacimiento</strong></h5>
               </div>
-              <h5><strong>Inscripción de Nacimiento</strong></h5>
             </div>
-            <div class="col-md-2 center-block">
+            <div class="col-md-4 center-block">
               <div class="matrimonios-container">
-                <button><i class="fas fa-heart"></i></button>
+                <a href="/pages/turnos/matrimonio/matrimonio.html"><button><i class="fas fa-heart"></i></button></a>
+                <h5><strong>Matrimonios</strong></h5>
               </div>
-              <h5><strong>Matrimonios</strong></h5>
             </div>
-            <div class="col-md-2 center-block">
+            <div class="col-md-4 center-block">
               <div class="dni-container">
                 <a href="/pages/turnos/dni/dni.html"><button><i class="far fa-id-card"></i></button></a>
+                <h5><strong>Renovación DNI</strong></h5>
               </div>
-              <h5><strong>Renovación DNI</strong></h5>
             </div>
-            <div class="col-md-2 center-block">
-              <div class="divorsios-container">
-                <button><i class="fas fa-heart-broken"></i></button>
+            <div class="col-md-4 center-block">
+              <div class="divorcios-container">
+                <a href="/pages/turnos/divorcio/divorcio.html"><button><i class="fas fa-heart-broken"></i></button></a>
+                <h5><strong>Divorcio</strong></h5>
               </div>
-              <h5><strong>Divorcio</strong></h5>
             </div>
-            <div class="col-md-2 center-block">
+            <div class="col-md-4 center-block">
               <div class="defunciones-container">
-                <button><i class="fas fa-notes-medical"></i></button>
+                <a href="/pages/turnos/defuncion/defuncion.html"><button><i class="fas fa-notes-medical"></i></button></a>
+                <h5><strong>Defunciones</strong></h5>
               </div>
-              <h5><strong>Defunciones</strong></h5>
             </div>
           </div>
         </div>
@@ -166,7 +162,7 @@
       <div class="container-fluid" align="center">
         <div class="row sidebars-zone mar-top-80">
           <div class="col-md-3 center-block">
-            <img src="/img/footer.jpg" alt="Imagen Delegaciones" class="img-fluid">
+            <img id="logo-footer" src="/img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
           </div>
           <div class="col-md-3 center-block">
             <h5><strong>REDES SOCIALES</strong></h5>
