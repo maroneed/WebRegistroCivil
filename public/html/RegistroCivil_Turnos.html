@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”utf-8” />
+    <title>Registro Civil Turnos Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1 class="text-center">Turnos Online</h1>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <h5 class="mb-3 text-primary">Busqueda de Persona</h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="dniin" class="form-control" placeholder="DNI">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="button" id="botper" class="btn btn-outline-primary" value="Buscar Persona" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p id="mueper"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-primary">
+                            <h5 class="mb-3 text-primary">Datos del turno</h5>
+                            Fecha: <input type="date" class="form-control" id="datepicker">
+                            <div class="form-group">
+                                <label for="sel1">Seleccione el tramite:</label>
+                                <select class="form-control" id="seltte">
+                                    <option selected="True" disabled="disabled">Tipo de Tramite</option>
+                                    <option value="Trámite de Matrimonio">Trámite de Matrimonio</option>
+                                    <option value="Trámite de DNI">Trámite de DNI</option>
+                                    <option value="Trámite de Nacimiento">Trámite de Nacimiento</option>
+                                    <option value="Trámite de Divorcio">Trámite de Divorcio</option>
+                                    <option value="Trámite de Defunción">Trámite de Defunción</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="col-sm-4">
+                        <h4 class="text-success">Turno seleccionado</></h4>
+                        <ul id="dattur" class="list-group">
+                            <li id="lisdni">Dni</li>
+                            <li id="lisnya">Nombre y Apellido</li>
+                            <li id="lisfec">Fecha del turno</li>
+                            <li id="listte">Tipo de tramite a relalizar</li>
+                        </ul>
+                        <hr>
+                        
+                        <input type="button" id="bottur" class="btn btn-success" value="Confirmar Turno" />
+
+                    </aside>
+                </div>
+    </div>
+</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/RegistroCivil_Turnos.js"></script>
+</html>
