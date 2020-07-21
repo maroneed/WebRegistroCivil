@@ -19,7 +19,13 @@ $(document).ready(function () {
     
 });
 
+function redireccion(personaId){
+    var lnk="/actamatrimonio?personaId="+personaId;
+    window.location.href = lnk;
+}
+
 function limpiarcampos(){
+    var documentos = [];
     document.getElementById("dniC1").value="";
     document.getElementById("dniC1").setAttribute('personaId', "0");
     document.getElementById("nyaC1").innerHTML = `Ingresar DNI`;
@@ -287,9 +293,12 @@ function crearTramiteMatrimonio() {
                 xmlhttpput.setRequestHeader("Content-Type", "application/json");
                 xmlhttpput.send(jsnCasado);
 
-
-                alert("El código de Tramite Matrimonio gestionado es: " + JSON.stringify(response.id));
+                var idtramitematrimonio=JSON.stringify(response.id)
+                alert("El código de Tramite Matrimonio gestionado es: " + idtramitematrimonio);
                 limpiarcampos();
+                if (idtramitematrimonio!=""){
+                    redireccion(ContrayenteUnoId);
+                }
             }
         };
     }else alert ("Completar todos los datos");

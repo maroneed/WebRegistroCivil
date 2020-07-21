@@ -23,6 +23,11 @@ router.get('/gestionarturno', function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_GestionarTurno.html'))
 });
 
+router.get('/actamatrimonio', function(req,res){
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_ActaMatrimonio.html'))
+});
+
+
 //add the router
 app.use('/', router);
 // static files
