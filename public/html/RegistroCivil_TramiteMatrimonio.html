@@ -20,29 +20,29 @@
                 <hr />
                 <div class="container">
                     <input type="text" id="dniC1" class="form-control" placeholder="DNI del primer contrayente">
-                    <p id="nyaC1"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaC1"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <select class="form-control" id="proC1">
-                        <option selected="True" disabled="disabled">Profesión contrayente 1 </option>
+                        <option selected="True" disabled="disabled" id="proC1Def">Profesión contrayente 1 </option>
                     </select>
                 </div>
                 <hr />
                 <div class="container">
                     <input type="text" id="dniP11" class="form-control" placeholder="DNI del primer/a Padre/Madre">
-                    <p id="nyaP11"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaP11"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniP12" class="form-control" placeholder="DNI del segundo/a Padre/Madre">
-                    <p id="nyaP12"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaP12"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT11" class="form-control" placeholder="DNI del primer/a Testigo">
-                    <p id="nyaT11"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaT11"> Ingresar DNI/p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT12" class="form-control" placeholder="DNI del segundo/a Testigo">
-                    <p id="nyaT12"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaT12"> Ingresar DNI</p>
                 </div>
             </div>
 
@@ -51,29 +51,29 @@
                 <hr />
                 <div class="container">
                     <input type="text" id="dniC2" class="form-control" placeholder="DNI del primer contrayente">
-                    <p id="nyaC2"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaC2">Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <select class="form-control" id="proC2">
-                        <option selected="True" disabled="disabled">Profesión contrayente 2 </option>
+                        <option selected="True" disabled="disabled" id="proC2Def">Profesión contrayente 2 </option>
                     </select>
                 </div>
                 <hr />
                 <div class="container">
                     <input type="text" id="dniP21" class="form-control" placeholder="DNI del primer/a Padre/Madre">
-                    <p id="nyaP21"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaP21"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniP22" class="form-control" placeholder="DNI del segundo/a Padre/Madre">
-                    <p id="nyaP22"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaP22"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT21" class="form-control" placeholder="DNI del primer/a Testigo">
-                    <p id="nyaT21"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaT21"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT22" class="form-control" placeholder="DNI del segundo/a Testigo">
-                    <p id="nyaT22"> Cargo NyA de MS_Persona</p>
+                    <p id="nyaT22"> Ingresar DNI/p>
                 </div>
             </div>
 
@@ -81,9 +81,9 @@
 
                 <hr />
                 <div class="container">
-                    Número de Acta: <input type="text" id="actin" class="form-control" placeholder="Número de Acta">
+                    Número de Acta: <input type="text" id="actin" class="form-control" placeholder="Número de Acta" onkeypress="return soloNumeros(event,'actin');">
                     Tomo: <input type="text" id="tomin" class="form-control" placeholder="Tomo">
-                    Folio: <input type="text" id="folin" class="form-control" placeholder="Folio">
+                    Folio: <input type="text" id="folin" class="form-control" placeholder="Número de Folio" onkeypress="return soloNumeros(event,'folin');">
                 </div>
                 <p></p>
                 <div class="container">

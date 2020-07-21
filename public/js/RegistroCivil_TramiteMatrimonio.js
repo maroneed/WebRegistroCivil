@@ -2,6 +2,7 @@
 var documentos = [];
 $(document).ready(function () {
     document.querySelector('#botTramite').addEventListener('click', crearTramiteMatrimonio);
+    //document.querySelector('#botTramite').addEventListener('click', limpiarcampos);
     cargarProfesiones();
     //get persona contrayente1
     document.querySelector('#dniC1').addEventListener('blur', traerPersona);
@@ -17,6 +18,72 @@ $(document).ready(function () {
     document.querySelector('#dniT22').addEventListener('blur', traerPersona);
     
 });
+
+function limpiarcampos(){
+    document.getElementById("dniC1").value="";
+    document.getElementById("dniC1").setAttribute('personaId', "0");
+    document.getElementById("nyaC1").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniP11").value="";
+    document.getElementById("dniP11").setAttribute('personaId', "0");
+    document.getElementById("nyaP11").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniP12").value="";
+    document.getElementById("dniP12").setAttribute('personaId', "0");
+    document.getElementById("nyaP12").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniT11").value="";
+    document.getElementById("dniT11").setAttribute('personaId', "0");
+    document.getElementById("nyaT11").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniT12").value="";
+    document.getElementById("dniT12").setAttribute('personaId', "0");
+    document.getElementById("nyaT12").innerHTML = `Ingresar DNI`;
+ 
+    document.getElementById("dniC2").value="";
+    document.getElementById("dniC2").setAttribute('personaId', "0");
+    document.getElementById("nyaC2").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniP21").value="";
+    document.getElementById("dniP21").setAttribute('personaId', "0");
+    document.getElementById("nyaP21").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniP22").value="";
+    document.getElementById("dniP22").setAttribute('personaId', "0");
+    document.getElementById("nyaP22").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniT21").value="";
+    document.getElementById("dniT21").setAttribute('personaId', "0");
+    document.getElementById("nyaT21").innerHTML = `Ingresar DNI`;
+    document.getElementById("dniT22").value="";
+    document.getElementById("dniT22").setAttribute('personaId', "0");
+    document.getElementById("nyaT22").innerHTML = `Ingresar DNI`;
+
+    document.getElementById("actin").value="";
+    document.getElementById("tomin").value="";
+    document.getElementById("folin").value="";
+
+    document.getElementById("proC1Def").selected=true;
+    document.getElementById("proC2Def").selected=true;
+
+}
+
+function soloNumeros(e,i)
+{
+    // capturamos la tecla pulsada
+    var teclaPulsada=window.event ? window.event.keyCode:e.which;
+    // capturamos el contenido del input
+    var valor=document.getElementById(i).value;
+
+    if(valor.length<10)
+    {
+        // 13 = tecla enter
+        // Si el usuario pulsa la tecla enter o el punto y no hay ningun otro
+        // punto
+        if(teclaPulsada==13)
+        {
+            return true;
+        }
+
+        // devolvemos true o false dependiendo de si es numerico o no
+        return /\d/.test(String.fromCharCode(teclaPulsada));
+    }else{
+        return false;
+    }
+}
 
 function insertarDnis()
 {
@@ -108,7 +175,7 @@ function cargarProfesiones(){
         var data = null;
         data = JSON.parse(this.response);
         if (reqpro.status >= 200 && reqpro.status < 400) {
-            //falta manejar erro del lado de msPersona. cuando el dni no existe, el ms  tira error
+           
             data.forEach(profesiones => {
                 //profesiones contrayente 1
                 let $miSelProC1 = document.querySelector('#proC1');
@@ -157,8 +224,6 @@ function crearTramiteMatrimonio() {
     var ProfesionDosId = (proc2.options[proc2.selectedIndex]).getAttribute("profId");
 
     if ((actain!="")&&(tomoin!="")&&(folioin!="")&&(ProfesionUnoId!=null)&&(ProfesionDosId!=null)&&(documentos.length==10)){
-    //    if ((actain!="")&&(tomoin!="")&&(folioin!="")&&(ProfesionUnoId!=null)&&(ProfesionDosId!=null)&&(okdni)){
-
     //armamos el json 
         var objTma = {
             ContrayenteUnoId: ContrayenteUnoId.toString(),
@@ -224,6 +289,7 @@ function crearTramiteMatrimonio() {
 
 
                 alert("El código de Tramite Matrimonio gestionado es: " + JSON.stringify(response.id));
+                limpiarcampos();
             }
         };
     }else alert ("Completar todos los datos");

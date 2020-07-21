@@ -19,6 +19,10 @@ router.get('/tramitematrimonio', function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_TramiteMatrimonio.html'))
 });
 
+router.get('/gestionarturno', function(req,res){
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_GestionarTurno.html'))
+});
+
 //add the router
 app.use('/', router);
 // static files

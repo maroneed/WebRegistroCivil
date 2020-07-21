@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”utf-8” />
+    <title>Registro Civil Gestión de Turnos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1 class="text-center">Gestión de Turnos</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h5 class="mb-3 text-center text-primary">Datos del Turno</h5>
+                <hr />
+                <div class="container">
+                    <input type="text" id="dni" class="form-control" placeholder="DNI del turno">
+                    <p id="nyaC1"> </p>
+                </div>
+                <div class="container">
+                    <input type="button" id="botTurno" class="btn btn-success" value="Buscar Turno" />
+                </div>
+            </div>
+        </div>
+        <aside class="col-sm-4">
+            <h4 class="text-success">Turno Obtenido</></h4>
+            <ul id="dattur" class="list-group">
+                <li id="lisdni">Dni</li>
+                <li id="lisnya">Nombre y Apellido</li>
+                <li id="lisfec">Fecha del turno</li>
+                <li id="lisfecS">Fecha de solicitud</li>
+                <li id="lismail">Email</li>
+                <li id="listel">Télefono</li>
+                <li id="listtra">Tipo de tramite</li>
+            </ul>
+            <hr>
+            
+            <input type="button" id="bottur" class="btn btn-success" value="Gestionar Turno" />
+
+        </aside>
+    </div>
+</body> 
+<script src="js/jquery.js"></script>
+<script src="js/RegistroCivil_GestionarTurno.js"></script>
+</html>
