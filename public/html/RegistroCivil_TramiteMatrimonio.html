@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset=”utf-8” />
-    <title>Registro Civil Tramite Matrimonio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-</head>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <script src="https://kit.fontawesome.com/48a2428549.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <title>Registro Civil Tramite Matrimonio</title>
+    </head>
 <body>
     <header>
-        <div class="jumbotron">
-            <h1 class="text-center">Tramite Matrimonio</h1>
-
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/index.html">
+            <img id="logo" src="img/logo.png" alt="buenos aires provincia">
+            <h1 id="gestion">Gestión interna</h1>
+          </a>
+        </nav>
     </header>
+    <div id="main">
+        <div class="menu-bar text-xs-reght">
+            <nav class="container" role="menu">
+            <ul class="menu-list list-inline">
+                <li class="list-inline-item">
+                <a href="#">Tramite matrimonio</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        <p></p>
     <div class="container">
         <div class="row">
 
@@ -20,7 +45,7 @@
                 <hr />
                 <div class="container">
                     <input type="text" id="dniC1" class="form-control" placeholder="DNI del primer contrayente">
-                    <p id="nyaC1"> Ingresar DNI</p>
+                    <p id="nyaC1"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <select class="form-control" id="proC1">
@@ -30,19 +55,19 @@
                 <hr />
                 <div class="container">
                     <input type="text" id="dniP11" class="form-control" placeholder="DNI del primer/a Padre/Madre">
-                    <p id="nyaP11"> Ingresar DNI</p>
+                    <p id="nyaP11"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniP12" class="form-control" placeholder="DNI del segundo/a Padre/Madre">
-                    <p id="nyaP12"> Ingresar DNI</p>
+                    <p id="nyaP12"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT11" class="form-control" placeholder="DNI del primer/a Testigo">
-                    <p id="nyaT11"> Ingresar DNI/p>
+                    <p id="nyaT11"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT12" class="form-control" placeholder="DNI del segundo/a Testigo">
-                    <p id="nyaT12"> Ingresar DNI</p>
+                    <p id="nyaT12"class="persona"> Ingresar DNI</p>
                 </div>
             </div>
 
@@ -50,8 +75,8 @@
                 <h5 class="mb-3 text-center text-primary">Datos del segundo contrayente</h5>
                 <hr />
                 <div class="container">
-                    <input type="text" id="dniC2" class="form-control" placeholder="DNI del primer contrayente">
-                    <p id="nyaC2">Ingresar DNI</p>
+                    <input type="text" id="dniC2" class="form-control" placeholder="DNI del segundo contrayente">
+                    <p id="nyaC2"class="persona">Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <select class="form-control" id="proC2">
@@ -61,19 +86,19 @@
                 <hr />
                 <div class="container">
                     <input type="text" id="dniP21" class="form-control" placeholder="DNI del primer/a Padre/Madre">
-                    <p id="nyaP21"> Ingresar DNI</p>
+                    <p id="nyaP21"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniP22" class="form-control" placeholder="DNI del segundo/a Padre/Madre">
-                    <p id="nyaP22"> Ingresar DNI</p>
+                    <p id="nyaP22"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT21" class="form-control" placeholder="DNI del primer/a Testigo">
-                    <p id="nyaT21"> Ingresar DNI</p>
+                    <p id="nyaT21"class="persona"> Ingresar DNI</p>
                 </div>
                 <div class="container">
                     <input type="text" id="dniT22" class="form-control" placeholder="DNI del segundo/a Testigo">
-                    <p id="nyaT22"> Ingresar DNI/p>
+                    <p id="nyaT22"class="persona"> Ingresar DNI</p>
                 </div>
             </div>
 
@@ -81,9 +106,18 @@
 
                 <hr />
                 <div class="container">
-                    Número de Acta: <input type="text" id="actin" class="form-control" placeholder="Número de Acta" onkeypress="return soloNumeros(event,'actin');">
-                    Tomo: <input type="text" id="tomin" class="form-control" placeholder="Tomo">
-                    Folio: <input type="text" id="folin" class="form-control" placeholder="Número de Folio" onkeypress="return soloNumeros(event,'folin');">
+                    <div class="input-group">
+                        <span class="input-group-addon"> Número de Acta:   </span>
+                        <input type="text" id="actin" class="form-control" placeholder="Número de Acta" onkeypress="return soloNumeros(event,'actin');">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"> Tomo:   </span>
+                        <input type="text" id="tomin" class="form-control" placeholder="Tomo">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"> Folio: </span>
+                        <input type="text" id="folin" class="form-control" placeholder="Número de Folio" onkeypress="return soloNumeros(event,'folin');">
+                    </div>
                 </div>
                 <p></p>
                 <div class="container">
@@ -94,6 +128,87 @@
         </div>
 
     </div>
+    </div>
+    <footer id="footer">
+        <div class="container-fluid mar-top-80" align="center">
+          <div class="row sidebars-zone">
+            <div class="col-md-3 center-block">
+              <img id="logo-footer" src="img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
+            </div>
+            <div class="col-md-3 center-block">
+              <h5><strong>REDES SOCIALES</strong></h5>
+              <div class="redes-container">
+                <ul>
+                  <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            <h5><strong>CONTACTO</strong></h5>
+            <div class="redes-container">
+                <ul>
+                  <li><a href="#" class="mail"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+              <br>
+            </div>
+            <div class="col-md-3 center-block">
+              <h5><strong>TELEFONOS DE EMERGENCIA</strong></h5>
+              <div class="telefonos-container">
+                <ul>
+                  <li>
+                    <span class="hidden-md hidden-lg">
+                      <div><i class="fa fa-phone" aria-hidden="true"></i> 103 | Emergencias</div>
+                    </span>
+                  </li>
+                  <br>
+                  <li>
+                    <span class="hidden-md hidden-lg">
+                      <div><i class="fa fa-phone" aria-hidden="true"></i> 107 | SAME</div>
+                    </span>
+                  </li>
+                  <br>
+                  <li>
+                    <span class="hidden-md hidden-lg">
+                      <div><i class="fa fa-phone" aria-hidden="true"></i> 108 | Linea Social</div>
+                    </span>
+                  </li>
+                  <br>
+                  <li>
+                    <span class="hidden-md hidden-lg">
+                      <div><i class="fa fa-phone" aria-hidden="true"></i> 147 | Atención Ciudadana</div>
+                    </span>
+                  </li>
+                  <br>
+                  <li>
+                    <span class="hidden-md hidden-lg">
+                      <div><i class="fa fa-phone" aria-hidden="true"></i> 144 | Volencia de Género</div>
+                    </span>
+                  </li>
+                  <br>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 center-block">
+              <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
+              <div class="info-container">
+                <ul>
+                  <li>
+                    <a href="#">Terminos y condiciones</a>
+                  </li>
+                  <li>
+                    <a href="#">Políticas de privacidad</a>
+                  </li>
+                  <li>
+                    <a href="#">Mapa de sitio</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/RegistroCivil_TramiteMatrimonio.js"></script>

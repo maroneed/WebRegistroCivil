@@ -34,9 +34,9 @@ function traerPersona(idPersona){
 }
 
 function cargaractta() {
-    var idPersona = getUrlParameter('idPersona');
+    var personaId = getUrlParameter('personaId');
     var reqtra = new XMLHttpRequest()
-    var URL = "https://localhost:44368/api/TramiteMatrimonioes/GetMatrimonioPersona?personaid=" + idPersona;
+    var URL = "https://localhost:44368/api/TramiteMatrimonioes/GetMatrimonioPersona?personaId=" + personaId;
 
     reqtra.open("GET", URL, true);
     reqtra.onload = function () {
@@ -44,29 +44,31 @@ function cargaractta() {
         tramite = JSON.parse(this.response);
         if (reqtra.status >= 200 && reqtra.status < 400) {
             //var c1=traerPersona(idPersona);
-            var fecha = tramite.fechaCelebracion.substring(1,10);
+            var fecha = tramite.fechaCelebracion.substring(0,10);
             var contrayente1 = traerPersona(tramite.contrayentePersonaUnoId);
             var contrayente2 = traerPersona(tramite.contrayentePersonaDosId);
+
+            //datos
+            document.getElementById("p1").innerHTML = ` Se certifica que en el Acta número: `+ tramite.numeroActa+
+            `, tomo: `+tramite.tomo+ ` y número de folio: `+tramite.numeroFolio+
+            `, celegrado en la presente delegación.`
             //matrimonio
-            document.getElementById("p1").innerHTML = `En el Registro Nacional de las Personas, el día `+fecha+
-            ` se celebró el matrimonio entre `+ contrayente1+
-            ` y `+ contrayente2+`.`;
+            document.getElementById("p2").innerHTML = `Se encuentra labrado el matrimonio de `+
+            contrayente1+` con `+ contrayente2+`, celebrado el día `+
+            fecha+`.`;
             //contrayente1
-            document.getElementById("p2").innerHTML = contrayente1 + ` de profesión `+ tramite.profesionUnoTx+
-            ` es hijo/a de `+traerPersona(tramite.padreMadreUnoUnoId)+` y de `+traerPersona(tramite.padreMadreDosUnoId)+`.`+
-            ` siendo testigos del acto `+traerPersona(tramite.testigoUnoUnoId) + ' y '+traerPersona(tramite.testigoDosUnoId)+
+            document.getElementById("p3").innerHTML = contrayente1 + ` de profesión `+ tramite.profesionUnoTx+
+            `, es hijo/a de `+traerPersona(tramite.padreMadreUnoUnoId)+` y de `+traerPersona(tramite.padreMadreDosUnoId)+`.`+
+            ` Siendo testigos del acto `+traerPersona(tramite.testigoUnoUnoId) + ' y '+traerPersona(tramite.testigoDosUnoId)+
             ` por la primera parte.`;
             //contrayente2
-            document.getElementById("p3").innerHTML = contrayente2 + ` de profesión `+ tramite.profesionDosTx+
-            ` es hijo/a de `+traerPersona(tramite.padreMadreUnoDosId)+` y de `+traerPersona(tramite.padreMadreDosDosId)+`.`+
-            ` siendo testigos del acto `+traerPersona(tramite.testigoUnoDosId) + ' y '+traerPersona(tramite.testigoDosDosId)+
+            document.getElementById("p4").innerHTML = contrayente2 + ` de profesión `+ tramite.profesionDosTx+
+            `, es hijo/a de `+traerPersona(tramite.padreMadreUnoDosId)+` y de `+traerPersona(tramite.padreMadreDosDosId)+`.`+
+            ` Siendo testigos del acto `+traerPersona(tramite.testigoUnoDosId) + ' y '+traerPersona(tramite.testigoDosDosId)+
             ` por la segunda parte.`;
             
-            //datos
-            document.getElementById("p4").innerHTML = ` Este acto celebrado se registra en el Acta número: `+ tramite.numeroActa+
-            `, tomo: `+tramite.tomo+ ` y número de folio: `+tramite.numeroFolio+`.`
-
-
+            //cierre
+            document.getElementById("p5").innerHTML = "Se da fe que el texto concuerda con el acta expresada. Registro Nacional de las Personas."           
         }
     }
     reqtra.send();

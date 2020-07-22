@@ -294,7 +294,7 @@ function crearTramiteMatrimonio() {
                 xmlhttpput.send(jsnCasado);
 
                 var idtramitematrimonio=JSON.stringify(response.id)
-                alert("El código de Tramite Matrimonio gestionado es: " + idtramitematrimonio);
+                //alert("El código de Tramite Matrimonio gestionado es: " + idtramitematrimonio);
                 limpiarcampos();
                 if (idtramitematrimonio!=""){
                     redireccion(ContrayenteUnoId);

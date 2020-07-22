@@ -63,13 +63,13 @@ function traerDatosPersona() {
                         tur = JSON.parse(this.response);
                         if (reqtur.status >= 200 && reqtur.status < 400) {
                             if (tur != null){
-                                document.getElementById("lisdni").innerHTML = dni;
-                                document.getElementById("lisnya").innerHTML = per.nombre+" "+per.apellido;
-                                document.getElementById("lisfec").innerHTML = tur.fechaTurno;
-                                document.getElementById("lisfecS").innerHTML = tur.fechasolicitud;
-                                document.getElementById("lismail").innerHTML =tur.emailTx;
-                                document.getElementById("listel").innerHTML =tur.telefonoTx;
-                                document.getElementById("listtra").innerHTML =tur.tipoTramite;
+                                document.getElementById("lisdni").innerHTML = "DNI: "+dni;
+                                document.getElementById("lisnya").innerHTML = "Nombre y Apellido: "+per.nombre+" "+per.apellido;
+                                document.getElementById("lisfec").innerHTML = "Fecha del turno: "+tur.fechaTurno;
+                                document.getElementById("lisfecS").innerHTML = "Fecha de solicitud: "+tur.fechasolicitud;
+                                document.getElementById("lismail").innerHTML ="Email: "+(tur.emailTx||"no informado");
+                                document.getElementById("listel").innerHTML ="Teléfono: "+(tur.telefono||"no informado");
+                                document.getElementById("listtra").innerHTML ="Tipo de tramite: "+tur.tipoTramite;
                                 tipoTramite=tur.tipoTramite;
                             }else {
                                 document.getElementById("dni").value=""; 
@@ -81,7 +81,7 @@ function traerDatosPersona() {
                     };
                     reqtur.send();
                 } else {
-                alert("error persona");
+                alert("Dni incorrecto, persona no registrada.");
             }
         }
         reqper.send();
