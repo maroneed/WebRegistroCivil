@@ -1,0 +1,89 @@
+.card-header {
+    background-color: #1b1e22;
+}
+
+.card-header .title{
+    margin: 5px 0;
+    padding: 0 5px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.card-body{
+    /* line-height: 15px; */
+    font-family: 'Open Sans',sans-serif;
+    color: #666;
+} 
+
+
+/* 
+input[type=checkbox]:not(old) + label {
+    position: relative;
+    display: block;
+    margin: 40px 0;
+    color: #666;
+    font-size: 24px;
+    cursor: pointer;
+    padding-left: 28px !important;
+    display: table-cell !important;
+    line-height: 26px;
+} */
+
+.divCheckBox label{
+    line-height: 15px;
+    margin: 15px 0;
+    font-size: 1.0em;
+    color: gray;
+    padding-left: 20px !important;
+    display: block !important;
+    cursor: pointer;
+    width: 100px;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked + label{
+    cursor: pointer;
+}
+
+.divCheckBox label:before{
+    content: '';
+    background: transparent;
+    border: 2px solid #037dbf;
+    border-radius: 6px;
+    display: inline-block;
+    height: 0.9em;
+    width: 0.9em;
+    margin-right: 10px;
+    text-align: center;
+    text-shadow: 4px -2px 3px rgb(172, 171, 171);
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked + label:before{
+    border-color: #037dbf;
+    color: #037dbf;
+    content: '\f00c';
+    font-family: "FontAwesome";
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 
+.divCheckBox label:before{
+    content: ' ';
+    border: solid 1px #9e9e9e;
+    border-radius: 3px;
+    width: 0.9em;
+    height: 0.9em;
+    position: absolute;
+    left: 3px;
+    top: 0.1em;
+    transition: all 0.2s;
+    transform: rotate(0deg);
+} */
+
