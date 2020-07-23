@@ -26,6 +26,10 @@ router.get('/pages/turnos/dni/dni.html', function(req,res){
   res.sendFile(path.join(__dirname+'/pages/turnos/dni/dni.html'));
 });
 
+router.get('/pages/turnos/dni/dni.html', function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/turnos/turnos.html'));
+});
+
 router.get('/pages/turnos/defuncion/defuncion.html', function(req,res){
   res.sendFile(path.join(__dirname+'/pages/turnos/defuncion/defuncion.html'));
 });
