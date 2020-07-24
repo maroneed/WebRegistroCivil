@@ -153,7 +153,7 @@
               idPersona2String= respuestaActa['contrayentePersonaDosId'];
               console.log("personaid 1: " + idPersona1);
               console.log("personaid 2: " + idPersona2);
-              var http2 = 'https://localhost:44391/api/persona/GetPersonaByID?PersonaId='
+              var http2 = 'https://localhost:44391/api/persona/GetPersonaByID/'
               var rutaGet2 = http2.concat(idPersona1String);
               fetch(rutaGet2)
               .then((respuestaPersona)=>{
