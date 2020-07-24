@@ -12,9 +12,15 @@ header{
 	background-color: rgb(221, 220, 220);
 	box-shadow: 0 2px 4px rgba(0,0,0,0.47), 0 10px 0 rgba(0,0,0,0);
 }
-
+#alertaMensaje{
+	position: relative;
+  bottom:   -93px;
+}
 /* NavBar */
-
+#warning{
+	position: relative;
+  right:  -75px;
+}
 .navbar{
 	margin-left: 5em;
 	margin-right: 5em;
@@ -374,7 +380,7 @@ h3 i{
 
 #footer{
 	  position: relative;
-		bottom: 40px;
+		bottom: -400px;
     z-index: 10;
     width: 100%;
     background-color: rgb(221, 220, 220);
@@ -509,26 +515,4 @@ h3 i{
 /* Helpers */
 .mar-top-80{
 	margin-top: 50px;
-}
-
-
-.persona {
-	margin-bottom: 0px;
-	text-align: left;
-	display: block;
-	color: #099fabb8;
-	font-size: 18px;
-}
-
-.textoacta {
-	margin-bottom: 10px;
-	text-align: left;
-	color: #0b0568d2;
-	font-size: 22px;
-	font-family: "Latin Modern Roman 10";
-	font-style: oblique;
-}
- #warning{
-	position: relative;
-  right:  -75px;
 }

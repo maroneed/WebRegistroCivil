@@ -51,9 +51,7 @@ function cargaractta() {
             //datos
             document.getElementById("p1").innerHTML = ` Se certifica que en el Acta número: `+ tramite.numeroActa+
             `, tomo: `+tramite.tomo+ ` y número de folio: `+tramite.numeroFolio+
-            `, celegrado en la presente delegación.`
-            //matrimonio
-            document.getElementById("p2").innerHTML = `Se encuentra labrado el matrimonio de `+
+            `, celegrado en la presente delegación, se encuentra labrado el matrimonio de `+
             contrayente1+` con `+ contrayente2+`, celebrado el día `+
             fecha+`.`;
             //contrayente1
