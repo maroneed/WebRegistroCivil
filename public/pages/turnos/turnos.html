@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <!-- <link rel="stylesheet" href="/pages/tramites/tramites.css"> -->
     <link rel="stylesheet" href="/pages/turnos/turnos.css">
     <link rel="stylesheet" href="/pages/turnos/calendar.css">
 
@@ -134,15 +133,23 @@
                       <h6 class="title">IDENTIFICACIÓN DEL SOLICITANTE</h6>
                     </header>
                     <div class="card-body">
-                      <div class="col-md-4 mb-4">
-                        <label for="sel1">Ingrese número de documento:</label>
-                        <input type="text" id="dniin" class="form-control" placeholder="DNI">
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <input type="button" id="botper" class="btn btn-success" value="Buscar Persona" />
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <p id="mueper"></p>
+                      <div class="row">
+                        <div class="col-md-5 mb-5">
+                          <label for="sel1">Ingrese número de documento:</label>
+                          <input type="text" id="dniin" class="form-control" placeholder="DNI">
+                          <br>
+                          <input style class="verde" id="btnBuscarPersona" type="button" value="Buscar Persona">
+                          <!-- <input type="button" id="botper" class="btn btn-success" value="Buscar Persona" /> -->
+                        </div>
+                         <div class="col-md-2 mb-2"></div>
+                        <div class="col-md-5 mb-5">
+                          <div class="nombrePersona  mar-top-80" id="nomPersona">
+                            
+                          </div>
+                          <!-- <ul id="dattur" class="list-group">
+                            <li id="lisnya">Nombre y Apellido</li>
+                          </ul> -->
+                        </div>
                       </div>
                     </div>
                   </article>
@@ -190,65 +197,30 @@
                     </header>
                     <div class="filter-content">
                       <div class="card-body">
-                      <!-- <label class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                        <span class="form-check-label">
-                          First hand items
-                        </span>
-                      </label>
-                      <label class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                        <span class="form-check-label">
-                          Brand new items
-                        </span>
-                      </label>
-                      <label class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                        <span class="form-check-label">
-                          Some other option
-                        </span>
-                      </label> -->
-                      <!-- <div class="custom-control custom-checkbox mb-0">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Custom checkbox</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
-                        <label class="custom-control-label" for="customCheck">Custom checkbox</label>
-                      </div> -->
-
-                      <div class="divCheckBox scroller" id="divCheckBox">
-                        <input type="checkbox" class="custom-control-input" id="rb0" name="horario" value="09:00">
-                        <label for="rb0">09:00</label>
-                        <input type="checkbox" class="custom-control-input" id="rb1" name="horario" value="09:30">
-                        <label for="rb1">09:30</label>
-                        <input type="checkbox" class="custom-control-input" id="rb2" name="horario" value="10:00">
-                        <label for="rb2">10:00</label>
-                        <input type="checkbox" class="custom-control-input" id="rb3" name="horario" value="10:30">
-                        <label for="rb3">10:30</label>
-                        <input type="checkbox" class="custom-control-input" id="rb4" name="horario" value="11:00">
-                        <label for="rb4">11:00</label>
-                        <input type="checkbox" class="custom-control-input" id="rb5" name="horario" value="11:30">
-                        <label for="rb5">11:30</label>
-                        <input type="checkbox" class="custom-control-input" id="rb6" name="horario" value="12:00">
-                        <label for="rb6">12:00</label>
-                        <input type="checkbox" class="custom-control-input" id="rb7" name="horario" value="12:30">
-                        <label for="rb7">12:30</label>
-                        <input type="checkbox" class="custom-control-input" id="rb8" name="horario" value="13:00">
-                        <label for="rb8">13:00</label>
-                      </div>
-        
-                        <!-- <div class="col-lg-5">
-                            <input type="checkbox" name="tipoGrado"  id="checkGrado" value="1"  class="only-one">Saldos por Grado
+                        <div class="divCheckBox scroller" id="divCheckBox">
+                          <input type="checkbox" class="custom-control-input" id="rb0" name="horario" value="09:00">
+                          <label for="rb0">09:00</label>
+                          <input type="checkbox" class="custom-control-input" id="rb1" name="horario" value="09:30">
+                          <label for="rb1">09:30</label>
+                          <input type="checkbox" class="custom-control-input" id="rb2" name="horario" value="10:00">
+                          <label for="rb2">10:00</label>
+                          <input type="checkbox" class="custom-control-input" id="rb3" name="horario" value="10:30">
+                          <label for="rb3">10:30</label>
+                          <input type="checkbox" class="custom-control-input" id="rb4" name="horario" value="11:00">
+                          <label for="rb4">11:00</label>
+                          <input type="checkbox" class="custom-control-input" id="rb5" name="horario" value="11:30">
+                          <label for="rb5">11:30</label>
+                          <input type="checkbox" class="custom-control-input" id="rb6" name="horario" value="12:00">
+                          <label for="rb6">12:00</label>
+                          <input type="checkbox" class="custom-control-input" id="rb7" name="horario" value="12:30">
+                          <label for="rb7">12:30</label>
+                          <input type="checkbox" class="custom-control-input" id="rb8" name="horario" value="13:00">
+                          <label for="rb8">13:00</label>
                         </div>
-                        <div class="col-lg-5">
-                            <input type="checkbox" name="tipoResumen"  id="checkResumen" value="2"  class="only-one"> Resumen de Saldos
-                        </div> -->
-       
-                      </div> <!-- card-body.// -->
+                      </div> 
                     </div>
-                  </article> <!-- card-group-item.// -->
-                </div> <!-- card.// -->
+                  </article>
+                </div> 
               </div>
 
               <div class="col-md-12 center-block mar-top-80">
@@ -257,7 +229,7 @@
                 </div>
               </div>
 
-              <div class="col-md-12 center-block">
+              <div class="col-md-12 center-block mar-top-80">
                 <div class="card">
                   <article class="card-group-item">
                     <header class="card-header">
@@ -274,6 +246,13 @@
                       </div>
                     </div>
                   </article>
+                </div>
+              </div>
+
+              <div class="col-md-12 center-block mar-top-80">
+                <div class="confOcancDeTurno" id="confOcanc">
+                  <input style class="verde floatRight" id="btnSolicitarTurno" type="button" value="Solicitar Turno">
+                  <input style class="negro floatRight" id="btnCancelarTurno" type="button" value="Cancelar Turno">
                 </div>
               </div>
             </div>
@@ -364,10 +343,50 @@
     </footer>
 
     <script type="text/javascript">
-        let calendar = new Calendar('calendar');
+        var calendar = new Calendar('calendar');
+        var fH = "" ;
+        var h = "" ;
+        var concatFyH = "";
         document.getElementById('calendar').addEventListener('change', e => {
-            console.log(calendar.value().format(''));
+            //console.log(calendar.value().format('LLLL'));
+            let calendarV = calendar.value().format('');
+            fH = calendarV;
         });
+
+        function load() {
+          var el = document.getElementById("divCheckBox");
+          el.addEventListener('click', e => {
+            var element = document.getElementById(e.target.id);
+            h = onlyOne(element);
+            if ( fH != "" && h != ""){
+              concatDateTime(fH,h);
+            }
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", load, false);
+
+        function concatDateTime(fechaHora, hora){
+          let afechaHora = fechaHora;
+          let ahora = hora;
+          var myVar = afechaHora.split('T',2);
+          var myNewVar = myVar[0].concat(['T'],ahora,':00-03:00'); 
+          concatFyH  = myNewVar;
+          var a = moment(myNewVar).format('LLLL');
+          document.getElementById('fechaHoraselec').innerHTML = a;
+          // let a = moment(myNewVar).format('LLLL');
+          // console.log(a);
+          // console.log(myNewVar);
+        }
+
+        var bt = document.getElementById("btnSolicitarTurno");
+        bt.addEventListener('click', confirmarTurnoBtn);
+
+        function confirmarTurnoBtn() {
+            confirmarTurno(concatFyH);
+        }
+
+
     </script>
 
   </body>

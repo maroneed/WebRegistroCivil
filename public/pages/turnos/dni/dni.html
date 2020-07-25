@@ -130,7 +130,7 @@
                                     Se trata de sacar el primer DNI del recién nacido. 
                                     Este trámite es simultáneo al trámite Inscripción de nacimiento.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -145,7 +145,7 @@
                                 <p class="card-text">
                                     Se realiza a partir de los 5 años cumplidos hasta un día antes de cumplir los 9 años.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -160,7 +160,7 @@
                                 <p class="card-text">
                                     Se realiza a partir de los 14 años cumplidos hasta un día antes de cumplir los 15 años.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -176,7 +176,7 @@
                                     Corresponde en caso de robo, hurto, extravío (pérdida), 
                                     cambio de domicilio o renovación por vencimiento.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -191,7 +191,7 @@
                                 <p class="card-text">
                                     Corresponde en los casos que hubo una modificación de datos en la inscripción original.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>     
                         </div>
                         <br>
@@ -206,7 +206,7 @@
                                 <p class="card-text">
                                     Se realiza en caso de identificaciones e inscripciones tardías.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>     
                         </div>
                         <br>
@@ -222,7 +222,7 @@
                                     En caso de ser la primera vez que tramita el DNI 
                                     debe iniciar el trámite en la Dirección Nacional de Migraciones.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>     
                         </div>
                         <br>
@@ -237,7 +237,7 @@
                                 <p class="card-text">
                                     Corresponde para los casos de gestión por primera vez o renovación por cualquier motivo.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
                             </div>     
                         </div>
                         <br>
@@ -330,6 +330,17 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      function cargarTipodeTramite () {
+        var bt = document.getElementById("btnTurnoDni");
+          bt.addEventListener('click', e => {
+            localStorage.setItem("tramiteDni", "tramiteDni");
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", cargarTipodeTramite, false);
+    </script>
 
   </body>
 </html>

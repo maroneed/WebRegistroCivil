@@ -34,6 +34,8 @@
     justify-content: space-between;
     text-transform: uppercase;
     margin-bottom: 30px;
+    letter-spacing: .03em;
+    font-weight: 600!important;
 }
 
 .calendar .control {
@@ -52,7 +54,7 @@
 
 .grid__header {
     color: #fff;
-    background-color: #007bff;
+    background-color: #037dbf;
     margin-bottom: 20px;
 }
 

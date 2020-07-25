@@ -8,6 +8,10 @@
     font-size: 20px;
     text-align: center;
     color: #fff;
+    font-family:'Open Sans',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    font-weight: 600!important;
 }
 
 
@@ -71,6 +75,90 @@ input[type=checkbox]:checked + label:before{
     font-family: "FontAwesome";
     text-align: center;
     vertical-align: middle;
+}
+
+.fechaHoraseleccionada {
+    position: relative;
+    display: inline-block;
+    color: #FFF;
+    text-shadow: 1px #000000;
+    padding: 10px;
+    font-size: 23px;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+    background: #037dbf;
+}
+
+input[type="button"].verde, input[type="submit"].verde {
+    background-color: #33b560 !important;
+    outline: none !important;
+    color: #FFF!important;
+    border: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input[type="button"], input[type="submit"] {
+    border-radius: 4px !important;
+}
+
+input[type="button"], input[type="submit"], .button {
+    color: #FFF!important;
+    border: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    padding: 9px 20px;
+    position: relative;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: .03em;
+    display: inline-block;
+    margin: 3px;
+    border: none;
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+}
+
+.floatRight {
+    float: right;
+    display: inline-block;
+}
+
+input[type="button"].negro, input[type="submit"].negro, .button.negro {
+    background-color: #000!important;
+    outline: none !important;
+    color: #FFF!important;
+    border: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+a.button, .button, input[type="button"], input[type="submit"] {
+    border-radius: 4px !important;
+}
+
+.nombrePersona {
+    font-size: 20px !important;
+    line-height: 20px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 4px;
+    background: url(/WebRegistroCivil/public/img/mark.png) no-repeat;
+    background-position: 0 5px;
+    width: auto;
+    position: static;
+    height: 35px;
+    font-family:'Open Sans',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    font-weight: 600!important;
 }
 
 /* 
