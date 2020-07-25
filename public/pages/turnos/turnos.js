@@ -59,11 +59,13 @@ function confirmarTurno(param) {
   // var dni = document.getElementById("dniin").value;
   var fecha = param;
   var tte = localStorage.getItem("tramiteDni");
+  var email = document.getElementById("email").value;
+  var telef = document.getElementById("telef").value;
   
 
   if ((idPersona != 0) || (fecha != "") || (tte != "")) {
       //armamos el json con idPersona + fecha + idEmpleado + tte
-      var objTur = { personaid: idPersona.toString(), fechaturno: fecha, empleadoid: idEmpleado.toString(), tipotramite: tte };
+      var objTur = { personaid: idPersona.toString(), fechaturno: fecha, empleadoid: idEmpleado.toString(), tipotramite: tte, EmailTx: email, TelefonoTx: telef};
       //var objTur = { personaid: idPersona, empleadoid= idEmpleado, tipotramite: tte };
       var jsnTur = JSON.stringify(objTur);
       console.log(jsnTur);
@@ -80,8 +82,8 @@ function confirmarTurno(param) {
               // parse JSON
               const response = JSON.parse(xmlhttp.responseText);
               
-              var idPersona = 0;
-              var idEmpleado = 0;
+              // var idPersona = 0;
+              // var idEmpleado = 0;
               
               // document.getElementById("lisdni").innerHTML = "DNI";
               // document.getElementById("lisnya").innerHTML = "Nombre y Apellido";
