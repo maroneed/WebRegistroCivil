@@ -46,6 +46,10 @@ router.get('/pages/turnos/divorcio/divorcio.html', function(req,res){
   res.sendFile(path.join(__dirname+'/pages/turnos/divorcio/divorcio.html'));
 });
 
+router.get('/img/mark.png'), function(req,res){
+  res.sendFile(path.join(__dirname+'/img/mark.png'));
+}
+
 //add the router
 app.use('/', router);
 // static files

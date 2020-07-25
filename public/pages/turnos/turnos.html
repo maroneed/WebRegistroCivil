@@ -342,6 +342,58 @@
       </div>
     </footer>
 
+    <!-- Modal Tramite realizado-->
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="alert alert-success" role="alert">
+            <h3 class="alert-heading" align="center">TRAMITE REALIZADO!</h4>
+            <hr>
+            <h5>Datos del registro:</label>
+            <br>
+            <br>
+            <span class = "registro" id="m1p1" value=""></span>
+            <br>
+            <br>
+            <span class = "registro" id="m1p2" value=""></span>
+            <br>
+            <br>
+            <span class = "registro" id="m1a1" value=""></span>
+            <br>
+            <br>
+            <span class = "registro" id="m1s1" value=""></span>
+            <hr>
+            <span>Se han registrado los datos exitosamente.</strong>
+          </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Tramite erroneo-->
+
+    <div id="myModal2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="alert alert-danger" role="alert">
+            <h3 class="alert-heading" align="center">Tramite no realizado!</h4>
+            <hr>
+            <h5>Atención:</label>
+            <br>
+            <br>
+            <p class = "registro">Chequee los datos y vuelva a intentarlo</p>
+            <hr>
+            <span>Los datos no han sido almacenados con exito.</strong>
+          </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <script type="text/javascript">
         var calendar = new Calendar('calendar');
         var fH = "" ;
@@ -384,6 +436,13 @@
 
         function confirmarTurnoBtn() {
             confirmarTurno(concatFyH);
+        }
+
+        var btc = document.getElementById("btnCancelarTurno");
+        btc.addEventListener('click', cancelarTurnoBtn);
+
+        function cancelarTurnoBtn() {
+          cancelarTurno();
         }
 
 

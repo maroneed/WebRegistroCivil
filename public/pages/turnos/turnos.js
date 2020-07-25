@@ -1,6 +1,8 @@
 var idPersona = 0;
 //el idEmpleado es utilizado para cuando el turno es cancelado, no en esta interfaz
 var idEmpleado = 2;
+var nombre;
+var apellido;
 
 $(document).ready(function () {
   document.querySelector('#btnBuscarPersona').addEventListener('click', traerDatosPersona);
@@ -58,7 +60,7 @@ function confirmarTurno(param) {
   //alert("Confirmo el turno con los datos ingresados.");
   // var dni = document.getElementById("dniin").value;
   var fecha = param;
-  var tte = localStorage.getItem("tramiteDni");
+  var tte = localStorage.getItem("tipoTurno");
   var email = document.getElementById("email").value;
   var telef = document.getElementById("telef").value;
   
@@ -90,7 +92,10 @@ function confirmarTurno(param) {
               // document.getElementById("lisfec").innerHTML = "Fecha";
               // document.getElementById("listte").innerHTML = "Tipo de trámite";
               
-              alert("El código de turno gestionado es: " + JSON.stringify(response.id));
+              // alert("El código de turno gestionado es: " + JSON.stringify(response.id));
+              modalTramiteCorrecto(fecha);
+          }else{
+            modalTramiteErroneo();
           }
       };
 
@@ -98,11 +103,20 @@ function confirmarTurno(param) {
 
 };
 
+function cancelarTurno() {
+  localStorage.removeItem("tipoTurno");
+  window.location.href = "/pages/tramites/tramites.html";
+}
 
-function seleccionFecha() {
-  document.getElementById("lisfec").innerHTML=this.value;
-};
+function modalTramiteCorrecto(param){
+    document.getElementById('m1p1').innerHTML = "Numero de DNI: " + document.getElementById("dniin").value;
+    document.getElementById('m1p2').innerHTML = "Nombre y Apellido: " + document.getElementById("nomPersona").value;
+    document.getElementById('m1s1').innerHTML = "Tipo de Turno: " + localStorage.getItem("tipoTurno");
+    document.getElementById('m1s1').innerHTML = "Fecha de Turno: " + param;
 
-function seleccionTt() {
-  document.getElementById("listte").innerHTML = this.value;
-};
+    $('#myModal').modal('show');
+}
+    
+function modalTramiteErroneo(){
+    $('#myModal2').modal('show');
+}
