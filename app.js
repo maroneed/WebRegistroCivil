@@ -25,5 +25,10 @@ router.get('/modificardni.html', function(req, res){
     res.sendFile(path.join(__dirname+'/public/html/modificardni.html'));
 });
 
+router.get('/tramitenacimiento.html', function(req, res){ 
+
+    res.sendFile(path.join(__dirname+'/public/html/tramitenacimiento.html'));
+});
+
 app.use('/',router);
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))

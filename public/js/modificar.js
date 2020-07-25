@@ -8,6 +8,8 @@ var formulario = document.getElementById('formulario');
 var respuesta = document.getElementById('respuesta');
 var aceptar = document.getElementById('aceptar'); //Para voler al menu principal una vez efectuado el tramite.
 
+obtener_localstorage(); //Obtengo los datos del buscador
+
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -25,13 +27,7 @@ formulario.addEventListener('submit', function (e) {
         })
         .catch(function (error) { //Mensaje de error de Tramite.
             console.log('Hubo un problema con la petición Fetch:' + error.message);
-            respuesta.innerHTML = `
-            <hr>
-            <div class="alert alert-warning" role="alert">
-                Ups! El sistema parece no responder, estamos trabajando para solucionar su problema.
-                <strong>Intentelo mas tarde.</strong>
-            </div>
-            `
+            mostrarAlertaAmarilla();
         })
 });
 
@@ -45,10 +41,22 @@ function modificarPersona(datos, tramite) {
     persona.then(function (per) { //Se efectua el PUT a persona
         console.log(per);
 
-        respuesta.innerHTML = `
-        <hr>
+        postTramite(tramite); //Se efectua el POST al tramite.
+        mostrarRespuesta(datos);
+        localStorage.clear();
+
+    })
+    persona.catch(function (error) { //Mensaje de error de Persona.
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        mostrarAlertaAmarilla();
+    })
+}
+
+function mostrarRespuesta(datos){
+    respuesta.innerHTML = `
+        
         <div class="alert alert-success role="alert">
-        <h4 class="alert-heading">PERSONA REGISTRADA</h4>
+        <h4 class="alert-heading text-center">PERSONA REGISTRADA</h4>
         <hr>
         <p>DATOS DE LA PESONA:
         <br>Numero de DNI: ${datos.get('dni')}
@@ -61,28 +69,23 @@ function modificarPersona(datos, tramite) {
         <br>Provincia: ${datos.get('provincia')}
         <br>Localidad: ${datos.get('localidad')}
         <br>Dirección: ${datos.get('direccion')}</p>
-        <hr>
         <strong>Compruebe los datos de la Persona.</strong>
         </div>
         `
         aceptar.innerHTML = `
-        <a href="http://localhost:3000"class="btn btn-success">Aceptar</a>
+        <a style="margin-left: 440px" href="http://localhost:3000"class="btn btn-success">Aceptar</a>
         `
-        postTramite(tramite); //Se efectua el POST al tramite.
-
-    })
-    persona.catch(function (error) { //Mensaje de error de Persona.
-        console.log('Hubo un problema con la petición Fetch:' + error.message);
-        respuesta.innerHTML = `
-        <hr>
-        <div class="alert alert-warning" role="alert">
-        Ups! El sistema parece no responder, estamos trabajando para solucionar su problema.
-        <strong>Intentelo mas tarde.</strong>
-        </div>
-        `
-    })
 }
 
+function mostrarAlertaAmarilla(){
+    respuesta.innerHTML = `
+    <hr>
+    <div class="alert alert-warning" role="alert">
+     Ups! El sistema parece no responder. Estamos trabajando para solucionar su problema.
+    <strong>Intentelo mas tarde.</strong>
+    </div>
+    `
+}
 //Nuevo Tramite
 function newPost(datos) {
     var tramite = {
@@ -143,3 +146,25 @@ function putPersona(persona) {
         },
     })
 }
+
+function obtener_localstorage(){
+    if(localStorage.getItem("datos")){
+      let datos = JSON.parse(localStorage.getItem("datos"));
+      
+      document.getElementById('dni').value = datos.dni;
+      document.getElementById('nombre').value = datos.nombre;
+      document.getElementById('apellido').value = datos.apellido;
+      document.getElementById('fecha').value = datos.fecha;
+      document.getElementById('genero').value = datos.genero;
+      document.getElementById('estado').value = datos.estado;
+      document.getElementById('nacionalidad').value = datos.nacionalidad;
+      document.getElementById('provincia').value = datos.provincia;
+      document.getElementById('localidad').value = datos.localidad;
+      document.getElementById('direccion').value = datos.direccion;
+  
+      return datos;
+    }
+    else{
+      console.log("No hay entradas en el local storage");
+    }
+  }

@@ -76,7 +76,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
               </div>
-              <input name="dni" type="number" autocomplete="off" min="23806242" class="form-control"
+              <input name="dni" id="dni" type="number" autocomplete="off" min="23806242" class="form-control"
                 placeholder="Ingrese DNI" aria-describedby="inputGroupPrepend3" required>
             </div>
 
@@ -85,7 +85,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">NOMBRE</span>
               </div>
-              <input name="nombre" type="text" autocomplete="off" class="form-control" placeholder="Ingrese Nombre/s"
+              <input name="nombre" id="nombre" type="text" autocomplete="off" class="form-control" placeholder="Ingrese Nombre/s"
                 aria-describedby="inputGroupPrepend3" pattern="[A-Za-z ]{2,36}" required>
             </div>
 
@@ -94,7 +94,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">APELLIDO</span>
               </div>
-              <input name="apellido" type="text" autocomplete="off" class="form-control"
+              <input name="apellido" id="apellido" type="text" autocomplete="off" class="form-control"
                 placeholder="Ingrese Apellido/s" aria-describedby="inputGroupPrepend3" pattern="[A-Za-z ]{1,36}"
                 required>
             </div>
@@ -104,7 +104,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">FECHA DE NACIMIENTO</span>
               </div>
-              <input type="datetime-local" class="form-control" id="datepicker" name="fecha" required>
+              <input type="datetime-local" id="fecha" class="form-control" id="datepicker" name="fecha" required>
             </div>
 
             <div class="input-group input-group-sm mb-3">
@@ -112,7 +112,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">GENERO</span>
               </div>
-              <select class="form-control" name="genero" required>
+              <select class="form-control" name="genero" id="genero" required>
                 <option value="">Elija una opción</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
@@ -125,7 +125,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">ESTADO CIVIL</span>
               </div>
-              <select class="form-control" name="estado" required>
+              <select class="form-control" name="estado" id="estado" required>
                 <option value="">Elija una opción</option>
                 <option value="Soltero/a">Soltero/a</option>
                 <option value="Casado/a">Casado/a</option>
@@ -139,7 +139,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">NACIONALIDAD</span>
               </div>
-              <select class="form-control" name="nacionalidad" required>
+              <select class="form-control" name="nacionalidad" id="nacionalidad" required>
                 <option value="">Elija una opción</option>
                 <option value="AF">Afganistán</option>
                 <option value="AL">Albania</option>
@@ -365,7 +365,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">PROVINCIA</span>
               </div>
-              <select class="form-control" name="provincia" required>
+              <select class="form-control" name="provincia" id="provincia" required>
                 <option value="">Elija una opción</option>
                 <option value="Buenos Aires">Buenos Aires</option>
                 <option value="Catamarca">Catamarca</option>
@@ -398,7 +398,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">LOCALIDAD</span>
               </div>
-              <select class="form-control" name="localidad" required>
+              <select class="form-control" name="localidad" id="localidad" required>
                 <option value="">Elija una opción</option>
                 <option value="AdolfoAlsina">Adolfo Alsina</option>
                 <option value="Adolfo Gonzales Chaves">Adolfo Gonzales Chaves</option>
@@ -543,7 +543,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">DIRECCIÓN</span>
               </div>
-              <input name="direccion" type="text" autocomplete="off" class="form-control"
+              <input name="direccion" id="direccion" type="text" autocomplete="off" class="form-control"
                 placeholder="Ingrese una Dirección" aria-describedby="inputGroupPrepend3" required>
             </div>
 
