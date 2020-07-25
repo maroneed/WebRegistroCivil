@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="/js/RegistroCivil_MatrimonioBusqueda.js"></script>
 
     <title>Registro Civil Busqueda de Matrimonio</title>
   </head>
@@ -22,9 +23,8 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="/index.html">
           <img id="logo" src="/../img/logo.png" alt="buenos aires provincia">
-          <h1 id="gestion">Busqueda de Divorcios</h1>
+          <h1 id="gestion">Busqueda de Matrimonio</h1>
         </a>
-
       </nav>
     </header>
 
@@ -36,10 +36,10 @@
               <a href="/index">Home</a>
             </li>
             <li class="list-inline-item">
-              <a href="tramitedivorcio">Nuevo Divorcio</a>
+              <a href="/tramitematrimonio">Tramite Matrimonio</a>
             </li>
             <li class="list-inline-item">
-              <a href="#">Busqueda de Divorcios</a>
+              <a href="#">Busqueda Matrimonio</a>
             </li>
           </ul>
         </nav>
@@ -54,120 +54,15 @@
                 <div class="input-group input-group-sm mb-3">
                   <input id="dniImput"type="number" min="0" class="form-control"  placeholder="Ingrese dni de uno de los contrayentes ..." aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="" required>
                   <div class="input-group-append">
-                    <button id="botonBuscar" class="btn btn-outline-secondary" type="button" onclick="buscar()">Cargar</button>
+                    <button id="botonBuscar" class="btn btn-outline-secondary" type="button" >Cargar</button>
                   </div>
                 </div>
-
-                <label id="mensajeActa" value=""></label>
                 <label id="mensajeActaFallida" value=""></label>
-
-            </div>
-
-            <div id ="alertaMensaje"class="col-md-6">
-              <div id="alerta" class="alert alert-primary alert-dismissible  collapse" role="alert" data-dismiss="alert">
-                <h3 class="alert-heading" align="center">TRAMITE VERIFICADO!</h4>
-                <hr>
-                <h5>Datos del registro:</label>
-                <br>
-                <span class = "registro" id="m1p1" value=""></span>
-                <br>
-                <span class = "registro" id="m1p2" value=""></span>
-                <br>
-                <span class = "registro" id="m1a1" value=""></span>
-                <br>
-                <span class = "registro" id="m1s1" value=""></span>
-                <br>
-                <span class = "registro" id="m1s4" value=""></span>
-                <br>
-                <span class = "registro" id="m1s5" value=""></span>
-                <hr>
-                <span>Este divorcio ya se encuentra registrado en la base de datos.</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-           </div>
-
-
-
+                
+          </div>
        </form>
       </div>
-
-
-      <!-- Modal Tramite realizado-->
-
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="alert alert-success" role="alert">
-              <h3 class="alert-heading" align="center">TRAMITE VERIFICADO!</h4>
-              <hr>
-              <h5>Datos del registro:</label>
-              <br>
-              <br>
-              <span class = "registro" id="m1p1" value=""></span>
-              <br>
-              <br>
-              <span class = "registro" id="m1p2" value=""></span>
-              <br>
-              <br>
-              <span class = "registro" id="m1a1" value=""></span>
-              <br>
-              <br>
-              <span class = "registro" id="m1s1" value=""></span>
-              <br>
-              <br>
-              <span class = "registro" id="m1s4" value=""></span>
-              <br>
-              <br>
-              <span class = "registro" id="m1s5" value=""></span>
-              <hr>
-              <span>Este divorcio ya se encuentra registrado en la base de datos.</strong>
-            </div>
-              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Modal divorcio no encontrado-->
-
-      <div id="myModal2" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="alert alert-warning " role="alert">
-              <h3 id="titulo"class="alert-heading" align="center">TRAMITE NO ENCONTRADO!</h4>
-              <hr>
-              <img id = "warning" src=/../img/warning.png width="300" height="300">
-              <span class = "registro" id="m1s1" value=""></span>
-              <hr>
-              <span id ="comentario" align="center">El dni ingresado no figura en ningun acta de divorcio.</strong>
-            </div>
-              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Error de conexión. -->
-
-      <div id="myModal3" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="alert alert-warning " role="alert">
-              <h3 id="titulo"class="alert-heading" align="center">ERROR DE CONEXIÓN!</h4>
-              <hr>
-              <img id = "warning" src=img/warning.png width="300" height="300">
-              <span class = "registro" id="m1s1" value=""></span>
-              <hr>
-              <span id ="comentario">Algo ha ocurrido al momento de validar los datos. Vuelve a intentarlo.</strong>
-            </div>
-              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     <footer id="footer">
       <div class="container-fluid mar-top-80" align="center">
         <div class="row sidebars-zone">
@@ -248,10 +143,5 @@
         </div>
       </div>
     </footer>
-
   </body>
-  <script src="/js/proyectoBusqueda.js"></script>
-  <script src="/js/bootstrap.min"></script>
-
-
 </html>

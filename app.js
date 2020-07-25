@@ -11,6 +11,14 @@ router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+router.get('/index.html',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+});
+
+router.get('/index',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+});
+
 //turno
 router.get('/nuevoturno', function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_Turnos.html'))
@@ -27,6 +35,10 @@ router.get('/tramitematrimonio', function(req,res){
 
 router.get('/actamatrimonio', function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_ActaMatrimonio.html'))
+});
+
+router.get('/busquedamatrimonio', function(req,res){
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_MatrimonioBusqueda.html'))
 });
 
 //divorcio
