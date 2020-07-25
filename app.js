@@ -50,6 +50,31 @@ router.get('/busquedadivorcio', function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_DivorcioBusqueda.html'))
 });
 
+//dni
+router.get('/tramitedni', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_tramitedni.html'));
+});
+
+router.get('/nuevodni', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_nuevodni.html'));
+});
+
+router.get('/buscardni', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_buscardni.html'));
+});
+
+router.get('/modificardni', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_modificardni.html'));
+});
+
+router.get('/tramitenacimiento', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_tramitenacimiento.html'));
+});
 
 //add the router
 app.use('/', router);
