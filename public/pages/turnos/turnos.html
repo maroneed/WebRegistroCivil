@@ -43,13 +43,10 @@
               <a class="nav-link" href="/pages/tramites/tramites.html">Tramites<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Solicitudes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Municipios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gestion Interna</a>
             </li>
           </ul>
         </div>
@@ -61,7 +58,7 @@
           <nav class="container" role="menu">
             <ul class="menu-list list-inline">
               <li class="list-inline-item">
-                <a href="#">Inicio</a>
+                <a href="#">Inicio / Tramites / Turno</a>
               </li>
             </ul>
           </nav>
@@ -139,49 +136,18 @@
                           <input type="text" id="dniin" class="form-control" placeholder="DNI">
                           <br>
                           <input style class="verde" id="btnBuscarPersona" type="button" value="Buscar Persona">
-                          <!-- <input type="button" id="botper" class="btn btn-success" value="Buscar Persona" /> -->
                         </div>
                          <div class="col-md-2 mb-2"></div>
                         <div class="col-md-5 mb-5">
-                          <div class="nombrePersona  mar-top-80" id="nomPersona">
+                          <div class="nombrePersona  mar-top-80" id="nomPersona" style="display: none;">
                             
                           </div>
-                          <!-- <ul id="dattur" class="list-group">
-                            <li id="lisnya">Nombre y Apellido</li>
-                          </ul> -->
                         </div>
                       </div>
                     </div>
                   </article>
                 </div>
               </div>
-            
-              <!-- <div class="col-md-12 center-block mar-top-80">
-                <div class="card">
-                  <article class="card-group-item">
-                    <header class="card-header">
-                      <h6 class="title">TRÁMITE</h6>
-                    </header>
-                    <div class="card-body">
-                      <div class="panel panel-primary">
-                        <div class="form-group">
-                          <div class="col-md-12 md-12">
-                            <label for="sel1">Seleccione tipo de tramite:</label>
-                            <select class="form-control" id="seltte">
-                                <option selected="True" disabled="disabled">Desplegá la lista para seleccionar uno</option>
-                                <option value="Trámite de Matrimonio">Trámite de Matrimonio</option>
-                                <option value="Trámite de DNI">Trámite de DNI</option>
-                                <option value="Trámite de Nacimiento">Trámite de Nacimiento</option>
-                                <option value="Trámite de Divorcio">Trámite de Divorcio</option>
-                                <option value="Trámite de Defunción">Trámite de Defunción</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div> -->
 
               <div class="col-md-6 center-block mar-top-80">
                 <div class="calendar" id="calendar">
@@ -224,7 +190,7 @@
               </div>
 
               <div class="col-md-12 center-block mar-top-80">
-                <div class="fechaHoraseleccionada" id="fechaHoraselec">
+                <div class="fechaHoraseleccionada" id="fechaHoraselec" style="display: none;">
 
                 </div>
               </div>
@@ -240,10 +206,12 @@
                         <label for="sel1">Ingrese Mail:</label>
                         <input type="email" id="email" class="form-control" placeholder="nombre@example.com"/>
                       </div>
+                      <br>
                       <div class="col-md-6 mb-6">
                         <label for="sel1">Ingrese Nº de teléfono:</label>
-                        <input type="text" id="telef" class="form-control" placeholder="Núm. Télefono"/>
+                        <input type="tel" id="telef" class="form-control" placeholder="Núm. Télefono"/>
                       </div>
+                      <br>
                     </div>
                   </article>
                 </div>
@@ -262,8 +230,8 @@
 
 
     <footer id="footer">
-      <div class="container-fluid" align="center">
-        <div class="row sidebars-zone mar-top-80">
+      <div class="container-fluid mar-top-80" align="center">
+        <div class="row sidebars-zone">
           <div class="col-md-3 center-block">
             <img id="logo-footer" src="/img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
           </div>
@@ -271,16 +239,16 @@
             <h5><strong>REDES SOCIALES</strong></h5>
             <div class="redes-container">
               <ul>
-                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/registropba/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/registropba" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/registropba/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOCuUm6avORohwIJ02cAHxw/featured?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i></a></li>
               </ul>
             </div>
           <h5><strong>CONTACTO</strong></h5>
           <div class="redes-container">
               <ul>
-                <li><a href="#" class="mail"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="mailto:dprp@gob.gba.gov.ar" class="mail"><i class="fa fa-envelope"></i></a></li>
               </ul>
           </div>
             <br>
@@ -325,44 +293,40 @@
           <div class="col-md-3 center-block">
             <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
             <div class="info-container">
-              <ul>
-                <li>
-                  <a href="#">Terminos y condiciones</a>
-                </li>
-                <li>
-                  <a href="#">Políticas de privacidad</a>
-                </li>
-                <li>
-                  <a href="#">Mapa de sitio</a>
-                </li>
-              </ul>
+              <span>Trabajo desarrollado por:</span>
+              <p>
+                Christian Botta <br>
+                Gabriel Appella <br>
+                Lucas Barrera <br>
+                Ayelen Palmieri <br>
+              </p>
+              <img src="/img/logounaj.jpg" align="left" alt="Imagen Unaj" class="img-fluid">
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Modal Tramite realizado-->
 
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="alert alert-success" role="alert">
-            <h3 class="alert-heading" align="center">TRAMITE REALIZADO!</h4>
+            <h3 class="alert-heading" align="center">TURNO ASIGNADO</h4>
             <hr>
-            <h5>Datos del registro:</label>
+            <h5>Datos del Turno:</label>
             <br>
             <br>
-            <span class = "registro" id="m1p1" value=""></span>
+            <span class="turno" id="numDni" value=""></span>
             <br>
             <br>
-            <span class = "registro" id="m1p2" value=""></span>
+            <span class="turno" id="nomApe" value=""></span>
             <br>
             <br>
-            <span class = "registro" id="m1a1" value=""></span>
+            <span class="turno" id="tipoTurno" value=""></span>
             <br>
             <br>
-            <span class = "registro" id="m1s1" value=""></span>
+            <span class="turno" id="fechTur" value=""></span>
             <hr>
             <span>Se han registrado los datos exitosamente.</strong>
           </div>
@@ -371,18 +335,18 @@
         </div>
       </div>
     </div>
-    <!-- Modal Tramite erroneo-->
+
 
     <div id="myModal2" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="alert alert-danger" role="alert">
-            <h3 class="alert-heading" align="center">Tramite no realizado!</h4>
+            <h3 class="alert-heading" align="center">TURNO NO ASIGNADO</h4>
             <hr>
             <h5>Atención:</label>
             <br>
             <br>
-            <p class = "registro">Chequee los datos y vuelva a intentarlo</p>
+            <p class="turno">Chequee los datos y vuelva a intentarlo</p>
             <hr>
             <span>Los datos no han sido almacenados con exito.</strong>
           </div>
@@ -393,14 +357,12 @@
     </div>
 
 
-
     <script type="text/javascript">
         var calendar = new Calendar('calendar');
         var fH = "" ;
         var h = "" ;
         var concatFyH = "";
         document.getElementById('calendar').addEventListener('change', e => {
-            //console.log(calendar.value().format('LLLL'));
             let calendarV = calendar.value().format('');
             fH = calendarV;
         });
@@ -426,9 +388,6 @@
           concatFyH  = myNewVar;
           var a = moment(myNewVar).format('LLLL');
           document.getElementById('fechaHoraselec').innerHTML = a;
-          // let a = moment(myNewVar).format('LLLL');
-          // console.log(a);
-          // console.log(myNewVar);
         }
 
         var bt = document.getElementById("btnSolicitarTurno");
@@ -444,7 +403,6 @@
         function cancelarTurnoBtn() {
           cancelarTurno();
         }
-
 
     </script>
 

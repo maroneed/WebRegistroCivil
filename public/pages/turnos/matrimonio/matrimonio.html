@@ -39,13 +39,10 @@
               <a class="nav-link" href="/pages/tramites/tramites.html">Tramites<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Solicitudes</a>
+              <a class="nav-link" href="/404-notfound.html">Municipios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Municipios</a>
+              <a class="nav-link" href="#">Gestion Interna</a>
             </li>
           </ul>
         </div>
@@ -57,7 +54,7 @@
           <nav class="container" role="menu">
             <ul class="menu-list list-inline">
               <li class="list-inline-item">
-                <a href="#">Inicio</a>
+                <a href="#">Inicio / Tramite / Matrimonio</a>
               </li>
             </ul>
           </nav>
@@ -128,7 +125,7 @@
                                 <p class="card-text">
                                     A través de este trámite podrás casarte en la Provincia de Buenos Aires.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoMat1" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -144,7 +141,7 @@
                                     Este trámite le permite contraer matrimonio a una persona 
                                     que no se encuentra en el país o en la Provincia.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoMat2" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -159,7 +156,7 @@
                                 <p class="card-text">
                                     Se trata de una autorización para ciudadanos y extranjeros divorciados en el extranjero.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoMat3" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -175,7 +172,7 @@
                                     Este trámite está destinado a parejas no casadas que conviven y quieren 
                                     regularizar sus derechos y obligaciones.
                                 </p>
-                                <a class="btn btn-primary btn-block" href="#" role="button">Solicitar Turno</a>
+                                <a class="btn btn-primary btn-block" id="btnTurnoMat4" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
                             </div>
                         </div>
                         <br>
@@ -189,8 +186,8 @@
 
 
     <footer id="footer">
-      <div class="container-fluid" align="center">
-        <div class="row sidebars-zone mar-top-80">
+      <div class="container-fluid mar-top-80" align="center">
+        <div class="row sidebars-zone">
           <div class="col-md-3 center-block">
             <img id="logo-footer" src="/img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
           </div>
@@ -198,16 +195,16 @@
             <h5><strong>REDES SOCIALES</strong></h5>
             <div class="redes-container">
               <ul>
-                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/registropba/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/registropba" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/registropba/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOCuUm6avORohwIJ02cAHxw/featured?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i></a></li>
               </ul>
             </div>
           <h5><strong>CONTACTO</strong></h5>
           <div class="redes-container">
               <ul>
-                <li><a href="#" class="mail"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="mailto:dprp@gob.gba.gov.ar" class="mail"><i class="fa fa-envelope"></i></a></li>
               </ul>
           </div>
             <br>
@@ -252,22 +249,40 @@
           <div class="col-md-3 center-block">
             <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
             <div class="info-container">
-              <ul>
-                <li>
-                  <a href="#">Terminos y condiciones</a>
-                </li>
-                <li>
-                  <a href="#">Políticas de privacidad</a>
-                </li>
-                <li>
-                  <a href="#">Mapa de sitio</a>
-                </li>
-              </ul>
+              <span>Trabajo desarrollado por:</span>
+              <p>
+                Christian Botta <br>
+                Gabriel Appella <br>
+                Lucas Barrera <br>
+                Ayelen Palmieri <br>
+              </p>
+              <img src="/img/logounaj.jpg" align="left" alt="Imagen Unaj" class="img-fluid">
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+
+      function cargarTipodeTramiteMATRIMONIO() {
+        localStorage.setItem("tipoTurno", "tramiteMat");
+      }
+  
+      var bt1 = document.getElementById("btnTurnoMat1");
+      bt1.addEventListener('click', cargarTipodeTramiteMATRIMONIO);
+  
+      var bt2 = document.getElementById("btnTurnoMat2");
+      bt2.addEventListener('click', cargarTipodeTramiteMATRIMONIO);
+  
+      var bt3 = document.getElementById("btnTurnoMat3");
+      bt3.addEventListener('click', cargarTipodeTramiteMATRIMONIO);
+  
+      var bt4 = document.getElementById("btnTurnoMat4");
+      bt4.addEventListener('click', cargarTipodeTramiteMATRIMONIO);
+  
+    </script>
+  
 
   </body>
 </html>

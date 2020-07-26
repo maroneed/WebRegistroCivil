@@ -144,7 +144,7 @@ a.button, .button, input[type="button"], input[type="submit"] {
     border-radius: 4px !important;
 }
 
-.nombrePersona {
+.nombrePersona{
     font-size: 20px !important;
     line-height: 20px;
     font-weight: bold;

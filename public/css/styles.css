@@ -352,17 +352,8 @@ h3 i{
 	font-size: 18px;
 }
 
-.info-container ul{
-	padding: 12px 0;
-	position: relative;
-}
 
-.info-container ul li{
-	display: inline;
-	margin: 0 auto;
-}
-
-.info-container ul li a{
+.info-container p {
 	margin-bottom: 18px;
 	text-align: left;
 	display: block;
@@ -373,9 +364,20 @@ h3 i{
 	font-size: 18px;
 }
 
-.info-container a:hover{
-	text-decoration: none;
-	color: #fff;
+.info-container span{
+	margin-bottom: 18px;
+	text-align: left;
+	display: block;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	color: #045785;
+	font-size: 18px;
+}
+
+.info-container img {
+	width: 170px;
+	height: 190px;
+	padding: 20px;
 }
 
 

@@ -9,6 +9,24 @@ $(document).ready(function () {
 });
 
 
+function mostrarStylos() {
+  var x = document.getElementById("nomPersona");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+   x.style.display = "none";
+  }
+} 
+
+function mostrarStylos2() {
+  var x = document.getElementById("fechaHoraselec");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+   x.style.display = "none";
+  }
+} 
+
 function onlyOne(checkbox) { 
   var pepe;
   var checkboxes = document.getElementsByName('horario')
@@ -19,7 +37,6 @@ function onlyOne(checkbox) {
     if (item.checked == true) {
       let itemV = item.value;
       pepe = itemV;
-      // console.log(item.value);
     }
   });
   return pepe;
@@ -28,7 +45,6 @@ function onlyOne(checkbox) {
 function traerDatosPersona() {
   //Voy contra el micro de persona, cuando se verifica la existencia del dni, luego modifico los datos en el turno seleccionado.
   var dni = document.getElementById("dniin").value;
-  //42568589
   if (dni != "") {
       var reqper = new XMLHttpRequest()
       var URL = "https://localhost:44391/api/persona/GetPersona/" + dni;
@@ -40,10 +56,11 @@ function traerDatosPersona() {
           var txt = "";
           if (reqper.status >= 200 && reqper.status < 400) {
                   idPersona = per.personaId;
-                  //escribo los datos en el listado de confirmar turno
-                  // document.getElementById("listte").innerHTML = localStorage.getItem("tramiteDni");
-                  // document.getElementById("lisdni").innerHTML = dni;
+                  nombre = per.nombre;
+                  apellido = per.apellido;
                   document.getElementById("nomPersona").innerHTML = per.nombre+" "+per.apellido;
+                  mostrarStylos();
+                  mostrarStylos2();
           } else {
               alert("El dni no existe");
           }
@@ -57,8 +74,6 @@ function traerDatosPersona() {
 
 
 function confirmarTurno(param) {
-  //alert("Confirmo el turno con los datos ingresados.");
-  // var dni = document.getElementById("dniin").value;
   var fecha = param;
   var tte = localStorage.getItem("tipoTurno");
   var email = document.getElementById("email").value;
@@ -66,9 +81,7 @@ function confirmarTurno(param) {
   
 
   if ((idPersona != 0) || (fecha != "") || (tte != "")) {
-      //armamos el json con idPersona + fecha + idEmpleado + tte
       var objTur = { personaid: idPersona.toString(), fechaturno: fecha, empleadoid: idEmpleado.toString(), tipotramite: tte, EmailTx: email, TelefonoTx: telef};
-      //var objTur = { personaid: idPersona, empleadoid= idEmpleado, tipotramite: tte };
       var jsnTur = JSON.stringify(objTur);
       console.log(jsnTur);
       //enviamos el post
@@ -83,16 +96,6 @@ function confirmarTurno(param) {
           if (xmlhttp.status >= 200 && xmlhttp.status < 300) {
               // parse JSON
               const response = JSON.parse(xmlhttp.responseText);
-              
-              // var idPersona = 0;
-              // var idEmpleado = 0;
-              
-              // document.getElementById("lisdni").innerHTML = "DNI";
-              // document.getElementById("lisnya").innerHTML = "Nombre y Apellido";
-              // document.getElementById("lisfec").innerHTML = "Fecha";
-              // document.getElementById("listte").innerHTML = "Tipo de trámite";
-              
-              // alert("El código de turno gestionado es: " + JSON.stringify(response.id));
               modalTramiteCorrecto(fecha);
           }else{
             modalTramiteErroneo();
@@ -109,10 +112,10 @@ function cancelarTurno() {
 }
 
 function modalTramiteCorrecto(param){
-    document.getElementById('m1p1').innerHTML = "Numero de DNI: " + document.getElementById("dniin").value;
-    document.getElementById('m1p2').innerHTML = "Nombre y Apellido: " + document.getElementById("nomPersona").value;
-    document.getElementById('m1s1').innerHTML = "Tipo de Turno: " + localStorage.getItem("tipoTurno");
-    document.getElementById('m1s1').innerHTML = "Fecha de Turno: " + param;
+    document.getElementById('numDni').innerHTML = "Numero de DNI: " + document.getElementById("dniin").value;
+    document.getElementById('nomApe').innerHTML = "Nombre y Apellido: " + nombre + " " + apellido;
+    document.getElementById('tipoTurno').innerHTML = "Tipo de Turno: " + localStorage.getItem("tipoTurno");
+    document.getElementById('fechTur').innerHTML = "Fecha de Turno: " +  moment(param).format('LLLL');
 
     $('#myModal').modal('show');
 }

@@ -1,346 +1,383 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/pages/tramites/tramites.css">
-    <link rel="stylesheet" href="/pages/turnos/dni/dni.css">
 
-    <script src="https://kit.fontawesome.com/48a2428549.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Website Registro Civil</title>
-  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/pages/tramites/tramites.css">
+  <link rel="stylesheet" href="/pages/turnos/dni/dni.css">
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/pages/tramites/tramites.html">
-          <img id="logo" src="/img/logo.png" alt="buenos aires provincia">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-lg-auto menu-list list-inline">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Inicio</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/pages/tramites/tramites.html">Tramites<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Solicitudes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Municipios</a>
-            </li>
-          </ul>
-        </div>
+  <script src="https://kit.fontawesome.com/48a2428549.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <title>Website Registro Civil</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/pages/tramites/tramites.html">
+        <img id="logo" src="/img/logo.png" alt="buenos aires provincia">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto menu-list list-inline">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/pages/tramites/tramites.html">Tramites<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/404-notfound.html">Municipios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gestion Interna</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="main">
+    <div class="menu-bar text-xs-reght">
+      <nav class="container" role="menu">
+        <ul class="menu-list list-inline">
+          <li class="list-inline-item">
+            <a href="#">Inicio / Tramite / Dni</a>
+          </li>
+        </ul>
       </nav>
-    </header>
-
-    <div id="main">
-        <div class="menu-bar text-xs-reght">
-          <nav class="container" role="menu">
-            <ul class="menu-list list-inline">
-              <li class="list-inline-item">
-                <a href="#">Inicio</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="container-fluid" align="center">
-          <div id="slider-home" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#slider-home" data-slide-to="0" class="active"></li>
-              <li data-target="#slider-home" data-slide-to="1"></li>
-              <li data-target="#slider-home" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/img/libros.jpg" alt="First slide">
-                <div class="carousel-caption">
-                  <h1><strong>Registro Civil</strong></h1>
-                  <p class="h4">Nuestra misión es Garantizar el Derecho a la Identidad de todos los Bonaerenses,
-                  mediante la registración de los actos y hechos vitales.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/img/libros.jpg" alt="Second slide">
-                <div class="carousel-caption">
-                  <h1><strong>Tramites en Linea</strong></h1>
-                  <p class="h4">En nuestra web se podran realizar la solicitud de Tramites de forma Online.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/img/libros.jpg" alt="Third slide">
-                <div class="carousel-caption">
-                  <h1><strong>Solicitud de Turnos</strong></h1>
-                  <p class="h4">Se garantiza la solicitud de Turnos para los diversos Tipos de Tramites.</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#slider-home" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#slider-home" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-  
-          <div class="container">
-            <div class="row main-body mar-top-80">
-              <div class="col-md-12 center-block">
-                <h3>Conoce mas de las <strong>Prestaciones del Registro Civil</strong><i class="fa fa-thumb-tack pull-right hidden-xs-down" aria-hidden="true"></i></h3>
-                <p>
-                  El Registro del Estado Civil y Capacidad de las Personas es responsable de la inscripción de todos los hechos 
-                  y actos jurídicos que den origen, alteren o modifiquen dicho estado y/o capacidad.
-                </p>
-                <h1><strong>DNI - PASAPORTE</strong></h1>
-                <p>
-                  Damos seguimiento a tus solicitudes. Sacá tu turno.
-                </p>
-              </div>
-              <div class="row main-body mar-top-80">
-                <div class="card-deck">
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>DNI - Recién nacido (0 años)</strong></h5>
-                                <p class="card-text">
-                                    Se trata de sacar el primer DNI del recién nacido. 
-                                    Este trámite es simultáneo al trámite Inscripción de nacimiento.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="/pages/turnos/turnos.html" role="button">Solicitar Turno</a>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>DNI - Actualización de 5 a 8 años</strong></h5>
-                                <p class="card-text">
-                                    Se realiza a partir de los 5 años cumplidos hasta un día antes de cumplir los 9 años.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>DNI - Actualización de 14 años</strong></h5>
-                                <p class="card-text">
-                                    Se realiza a partir de los 14 años cumplidos hasta un día antes de cumplir los 15 años.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>DNI - Nuevo Ejemplar</strong></h5>
-                                <p class="card-text">
-                                    Corresponde en caso de robo, hurto, extravío (pérdida), 
-                                    cambio de domicilio o renovación por vencimiento.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>Rectificación</strong></h5>
-                                <p class="card-text">
-                                    Corresponde en los casos que hubo una modificación de datos en la inscripción original.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>     
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>Tardios</strong></h5>
-                                <p class="card-text">
-                                    Se realiza en caso de identificaciones e inscripciones tardías.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>     
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>Extranjeros</strong></h5>
-                                <p class="card-text">
-                                    En caso de ser la primera vez que tramita el DNI 
-                                    debe iniciar el trámite en la Dirección Nacional de Migraciones.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>     
-                        </div>
-                        <br>
-                    </div>
-                    <div class="col-md-4 center-block">
-                        <div class="card">
-                            <div class="card-img-container">
-                                <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><strong>Sacar o renovar el pasaporte</strong></h5>
-                                <p class="card-text">
-                                    Corresponde para los casos de gestión por primera vez o renovación por cualquier motivo.
-                                </p>
-                                <a class="btn btn-primary btn-block" id="btnTurnoDni" href="#" role="button">Solicitar Turno</a>
-                            </div>     
-                        </div>
-                        <br>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
 
+    <div class="container-fluid" align="center">
+      <div id="slider-home" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#slider-home" data-slide-to="0" class="active"></li>
+          <li data-target="#slider-home" data-slide-to="1"></li>
+          <li data-target="#slider-home" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/libros.jpg" alt="First slide">
+            <div class="carousel-caption">
+              <h1><strong>Registro Civil</strong></h1>
+              <p class="h4">Nuestra misión es Garantizar el Derecho a la Identidad de todos los Bonaerenses,
+                mediante la registración de los actos y hechos vitales.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/libros.jpg" alt="Second slide">
+            <div class="carousel-caption">
+              <h1><strong>Tramites en Linea</strong></h1>
+              <p class="h4">En nuestra web se podran realizar la solicitud de Tramites de forma Online.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/libros.jpg" alt="Third slide">
+            <div class="carousel-caption">
+              <h1><strong>Solicitud de Turnos</strong></h1>
+              <p class="h4">Se garantiza la solicitud de Turnos para los diversos Tipos de Tramites.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#slider-home" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider-home" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
-    <footer id="footer">
-      <div class="container-fluid" align="center">
-        <div class="row sidebars-zone mar-top-80">
-          <div class="col-md-3 center-block">
-            <img id="logo-footer" src="/img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
+      <div class="container">
+        <div class="row main-body mar-top-80">
+          <div class="col-md-12 center-block">
+            <h3>Conoce mas de las <strong>Prestaciones del Registro Civil</strong><i
+                class="fa fa-thumb-tack pull-right hidden-xs-down" aria-hidden="true"></i></h3>
+            <p>
+              El Registro del Estado Civil y Capacidad de las Personas es responsable de la inscripción de todos los
+              hechos
+              y actos jurídicos que den origen, alteren o modifiquen dicho estado y/o capacidad.
+            </p>
+            <h1><strong>DNI - PASAPORTE</strong></h1>
+            <p>
+              Damos seguimiento a tus solicitudes. Sacá tu turno.
+            </p>
           </div>
-          <div class="col-md-3 center-block">
-            <h5><strong>REDES SOCIALES</strong></h5>
-            <div class="redes-container">
-              <ul>
-                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
-              </ul>
-            </div>
-          <h5><strong>CONTACTO</strong></h5>
-          <div class="redes-container">
-              <ul>
-                <li><a href="#" class="mail"><i class="fa fa-envelope"></i></a></li>
-              </ul>
-          </div>
-            <br>
-          </div>
-          <div class="col-md-3 center-block">
-            <h5><strong>TELEFONOS DE EMERGENCIA</strong></h5>
-            <div class="telefonos-container">
-              <ul>
-                <li>
-                  <span class="hidden-md hidden-lg">
-                    <div><i class="fa fa-phone" aria-hidden="true"></i> 103 | Emergencias</div>
-                  </span>
-                </li>
+          <div class="row main-body mar-top-80">
+            <div class="card-deck">
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>DNI - Recién nacido (0 años)</strong></h5>
+                    <p class="card-text">
+                      Se trata de sacar el primer DNI del recién nacido.
+                      Este trámite es simultáneo al trámite Inscripción de nacimiento.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni1" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
                 <br>
-                <li>
-                  <span class="hidden-md hidden-lg">
-                    <div><i class="fa fa-phone" aria-hidden="true"></i> 107 | SAME</div>
-                  </span>
-                </li>
+              </div>
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>DNI - Actualización de 5 a 8 años</strong></h5>
+                    <p class="card-text">
+                      Se realiza a partir de los 5 años cumplidos hasta un día antes de cumplir los 9 años.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni2" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
                 <br>
-                <li>
-                  <span class="hidden-md hidden-lg">
-                    <div><i class="fa fa-phone" aria-hidden="true"></i> 108 | Linea Social</div>
-                  </span>
-                </li>
+              </div>
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>DNI - Actualización de 14 años</strong></h5>
+                    <p class="card-text">
+                      Se realiza a partir de los 14 años cumplidos hasta un día antes de cumplir los 15 años.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni3" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
                 <br>
-                <li>
-                  <span class="hidden-md hidden-lg">
-                    <div><i class="fa fa-phone" aria-hidden="true"></i> 147 | Atención Ciudadana</div>
-                  </span>
-                </li>
+              </div>
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>DNI - Nuevo Ejemplar</strong></h5>
+                    <p class="card-text">
+                      Corresponde en caso de robo, hurto, extravío (pérdida),
+                      cambio de domicilio o renovación por vencimiento.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni4" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
                 <br>
-                <li>
-                  <span class="hidden-md hidden-lg">
-                    <div><i class="fa fa-phone" aria-hidden="true"></i> 144 | Volencia de Género</div>
-                  </span>
-                </li>
+              </div>
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Rectificación</strong></h5>
+                    <p class="card-text">
+                      Corresponde en los casos que hubo una modificación de datos en la inscripción original.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni5" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
                 <br>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 center-block">
-            <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
-            <div class="info-container">
-              <ul>
-                <li>
-                  <a href="#">Terminos y condiciones</a>
-                </li>
-                <li>
-                  <a href="#">Políticas de privacidad</a>
-                </li>
-                <li>
-                  <a href="#">Mapa de sitio</a>
-                </li>
-              </ul>
+              </div>
+              <div class="col-md-4 center-block" style="display: none;">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Tardios</strong></h5>
+                    <p class="card-text">
+                      Se realiza en caso de identificaciones e inscripciones tardías.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoDni6" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="col-md-4 center-block">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Extranjeros</strong></h5>
+                    <p class="card-text">
+                      En caso de ser la primera vez que tramita el DNI
+                      debe iniciar el trámite en la Dirección Nacional de Migraciones.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoExt" href="/pages/turnos/turnos.html"
+                      role="button">Solicitar Turno</a>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="col-md-4 center-block"style="display: none;">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/img/documento.png" class="card-img-top img-fluid" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Sacar o renovar el pasaporte</strong></h5>
+                    <p class="card-text">
+                      Corresponde para los casos de gestión por primera vez o renovación por cualquier motivo.
+                    </p>
+                    <a class="btn btn-primary btn-block" id="btnTurnoPas" href="#" role="button">Solicitar
+                      Turno</a>
+                  </div>
+                </div>
+                <br>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <script type="text/javascript">
-      function cargarTipodeTramite () {
-        var bt = document.getElementById("btnTurnoDni");
-          bt.addEventListener('click', e => {
-            localStorage.setItem("tipoTurno", "tramiteDni");
-          });
-      }
 
-      document.addEventListener("DOMContentLoaded", cargarTipodeTramite, false);
-    </script>
+  <footer id="footer">
+    <div class="container-fluid mar-top-80" align="center">
+      <div class="row sidebars-zone">
+        <div class="col-md-3 center-block">
+          <img id="logo-footer" src="/img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
+        </div>
+        <div class="col-md-3 center-block">
+          <h5><strong>REDES SOCIALES</strong></h5>
+          <div class="redes-container">
+            <ul>
+              <li><a href="https://www.facebook.com/registropba/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/registropba" class="twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/registropba/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCOCuUm6avORohwIJ02cAHxw/featured?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        <h5><strong>CONTACTO</strong></h5>
+        <div class="redes-container">
+            <ul>
+              <li><a href="mailto:dprp@gob.gba.gov.ar" class="mail"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+          <br>
+        </div>
+        <div class="col-md-3 center-block">
+          <h5><strong>TELEFONOS DE EMERGENCIA</strong></h5>
+          <div class="telefonos-container">
+            <ul>
+              <li>
+                <span class="hidden-md hidden-lg">
+                  <div><i class="fa fa-phone" aria-hidden="true"></i> 103 | Emergencias</div>
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="hidden-md hidden-lg">
+                  <div><i class="fa fa-phone" aria-hidden="true"></i> 107 | SAME</div>
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="hidden-md hidden-lg">
+                  <div><i class="fa fa-phone" aria-hidden="true"></i> 108 | Linea Social</div>
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="hidden-md hidden-lg">
+                  <div><i class="fa fa-phone" aria-hidden="true"></i> 147 | Atención Ciudadana</div>
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="hidden-md hidden-lg">
+                  <div><i class="fa fa-phone" aria-hidden="true"></i> 144 | Volencia de Género</div>
+                </span>
+              </li>
+              <br>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 center-block">
+          <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
+          <div class="info-container">
+            <span>Trabajo desarrollado por:</span>
+            <p>
+              Christian Botta <br>
+              Gabriel Appella <br>
+              Lucas Barrera <br>
+              Ayelen Palmieri <br>
+            </p>
+            <img src="/img/logounaj.jpg" align="left" alt="Imagen Unaj" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  </body>
+  <script type="text/javascript">
+
+    function cargarTipodeTramiteDNI() {
+      localStorage.setItem("tipoTurno", "tramiteDni");
+    }
+
+    function cargarTipodeTramiteEXT() {
+      localStorage.setItem("tipoTurno", "tramiteExt");
+    }
+
+    var bt1 = document.getElementById("btnTurnoDni1");
+    bt1.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var bt2 = document.getElementById("btnTurnoDni2");
+    bt2.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var bt3 = document.getElementById("btnTurnoDni3");
+    bt3.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var bt4 = document.getElementById("btnTurnoDni4");
+    bt4.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var bt5 = document.getElementById("btnTurnoDni5");
+    bt5.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var bt6 = document.getElementById("btnTurnoDni6");
+    bt6.addEventListener('click', cargarTipodeTramiteDNI);
+
+    var btExt = document.getElementById("btnTurnoExt");
+    btExt.addEventListener('click', cargarTipodeTramiteEXT);
+
+  </script>
+
+</body>
+
 </html>
