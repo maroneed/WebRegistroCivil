@@ -9,7 +9,7 @@ $(document).ready(function () {
 function redireccion(){
     var lnk="";
     switch (tipoTramite) {
-        case "tramiteMatrimonio":
+        case "tramiteMat":
             lnk="/tramitematrimonio"
             break;
         case "tramiteDni":
