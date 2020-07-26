@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylesDefuncion.css">
+
+    <script src="https://kit.fontawesome.com/48a2428549.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <title>Website Registro Civil</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/index">
+          <img id="logo" src="/../img/logo.png"alt="buenos aires provincia">
+          <h1 id="gestion">Gestión interna</h1>
+        </a>
+
+      </nav>
+    </header>
+
+    <div id="main">
+      <div class="menu-bar text-xs-reght">
+        <nav class="container" role="menu">
+          <ul class="menu-list list-inline">
+            <li class="list-inline-item">
+              <a href="/index">Home</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Tramite defunción</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/busquedadefuncion">Buscar defunción</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class='container'>
+        <form onsubmit="return validacion()">
+          <div class="row">
+
+              <div id ="primeraPersona"class="col-md-6">
+                  <hr />
+                  <h5 id="dat1" class="mb-3 text-center text-primary">Datos del tramite</h5>
+                  <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">DNI FALLECIDO</span>
+                    </div>
+                    <input  id="dniP1" type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="" >
+                  </div>
+                  <label id="campleteDni1" value=""></label>
+
+
+                  <div class="input-group input-group-sm mb-3" id="N1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">DNI SOLICITANTE</span>
+                    </div>
+                    <input  id="dniSolicitante" type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="">
+                  </div>
+                  <label id="campleteNombre1" value=""></label>
+                  <div class="input-group input-group-sm mb-3" id="N1">
+                    <div class="input-group-prepend">
+                      <span id="fechaSpan"class="input-group-text" id="inputGroup-sizing-sm">FECHA DE MUERTE</span>
+                    </div>
+                    <input  id="fecha" type="datetime-local" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="">
+                  </div>
+                  <label id="campleteNombre1" value=""></label>
+                  <div class="input-group input-group-sm mb-3" id="N1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="opcionesParentescoSpan">PARENTESCO</span>
+                    </div>
+                    <select class="form-control" id="opcionesParentesco" >
+                      <option id ="normal" >Madre</option>
+                      <option id ="urgente">Padre</option>
+                    </select>
+                  </div>
+                  <label id="campleteNombre1" value=""></label>
+             </div>
+
+             <div id ="alertaMensaje"class="col-md-6">
+               <div id="alerta" class="alert alert-primary alert-dismissible  collapse" role="alert" data-dismiss="alert">
+                 <h5>TRAMITE REGISTRADO ! </label>
+                 <br>
+                 <hr>
+                 <span class = "registro" id="1dat" value=""></span>
+                 <br>
+                 <br>
+                 <span class = "registro" id="2dat" value=""></span>
+
+                 <hr>
+                 <span>El tramite fue resgistrada exitosamente.</strong>
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+            </div>
+
+
+
+          <button type="button" id="confirmar"class="btn btn-success" data-toggle="modal" onclick="ConfirmarDefuncion()">CONFIRMAR</button>
+          <button type="button" id="cancelar"class="btn btn-danger" onclick="CancelarDivorcio()">CANCELAR</button>
+
+       </form>
+      </div>
+
+
+      <!-- Modal Tramite realizado-->
+
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="alert alert-success" role="alert">
+              <h3 class="alert-heading" align="center">TRAMITE REALIZADO!</h4>
+              <hr>
+              <h5>Datos del registro:</label>
+              <br>
+              <br>
+              <span class = "registro" id="m1p1" value=""></span>
+              <br>
+              <br>
+              <span class = "registro" id="m1p2" value=""></span>
+              <br>
+              <br>
+              <span class = "registro" id="m1a1" value=""></span>
+              <br>
+              <br>
+              <span class = "registro" id="m1s1" value=""></span>
+              <hr>
+              <span>Se han registrado los datos exitosamente.</strong>
+            </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Tramite erroneo-->
+
+      <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="alert alert-danger" role="alert">
+              <h3 class="alert-heading" align="center">Tramite no realizado!</h4>
+              <hr>
+              <h5>Atención:</label>
+              <br>
+              <br>
+              <p id= "mensaje"class = "registro">Complete todos los campos</p>
+              <hr>
+              <span>Los datos no han sido almacenados con exito.</strong>
+            </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal defuncion ya existente-->
+
+      <div id="myModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="alert alert-warning " role="alert">
+              <h3 id="titulo"class="alert-heading" align="center">TRAMITE YA EXISTENTE!</h4>
+              <hr>
+              <img id = "warning" src=/../img/warning.png width="300" height="300">
+              <span class = "registro" id="m1s1" value=""></span>
+              <hr>
+              <span id ="comentario">Se identifico una defuncion existente en la base de datos.</strong>
+            </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer id="footer">
+      <div class="container-fluid mar-top-80" align="center">
+        <div class="row sidebars-zone">
+          <div class="col-md-3 center-block">
+            <img id="logo-footer" src="/../img/footer.png" alt="Imagen Delegaciones" class="img-fluid">
+          </div>
+          <div class="col-md-3 center-block">
+            <h5><strong>REDES SOCIALES</strong></h5>
+            <div class="redes-container">
+              <ul>
+                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          <h5><strong>CONTACTO</strong></h5>
+          <div class="redes-container">
+              <ul>
+                <li><a href="#" class="mail"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+          </div>
+            <br>
+          </div>
+          <div class="col-md-3 center-block">
+            <h5><strong>TELEFONOS DE EMERGENCIA</strong></h5>
+            <div class="telefonos-container">
+              <ul>
+                <li>
+                  <span class="hidden-md hidden-lg">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 103 | Emergencias</div>
+                  </span>
+                </li>
+                <br>
+                <li>
+                  <span class="hidden-md hidden-lg">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 107 | SAME</div>
+                  </span>
+                </li>
+                <br>
+                <li>
+                  <span class="hidden-md hidden-lg">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 108 | Linea Social</div>
+                  </span>
+                </li>
+                <br>
+                <li>
+                  <span class="hidden-md hidden-lg">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 147 | Atención Ciudadana</div>
+                  </span>
+                </li>
+                <br>
+                <li>
+                  <span class="hidden-md hidden-lg">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 144 | Volencia de Género</div>
+                  </span>
+                </li>
+                <br>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 center-block">
+            <h5><strong>ACERCA DE ESTE SITIO</strong></h5>
+            <div class="info-container">
+              <ul>
+                <li>
+                  <a href="#">Terminos y condiciones</a>
+                </li>
+                <li>
+                  <a href="#">Políticas de privacidad</a>
+                </li>
+                <li>
+                  <a href="#">Mapa de sitio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <script src="/js/proyectoDefuncion.js"></script>
+</html>

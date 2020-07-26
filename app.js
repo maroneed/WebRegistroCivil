@@ -76,6 +76,17 @@ router.get('/tramitenacimiento', function(req, res){
   res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_tramitenacimiento.html'));
 });
 
+//defuncion
+router.get('/tramitedefuncion', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_defuncion.html'));
+});
+
+router.get('/busquedadefuncion', function(req, res){ 
+
+  res.sendFile(path.join(__dirname+'/public/html/RegistroCivil_busquedaDefuncion.html'));
+});
+
 //add the router
 app.use('/', router);
 // static files
